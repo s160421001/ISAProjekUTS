@@ -21,8 +21,6 @@ namespace ProjekISA_01_SVF_ManajemenArtis
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            this.IsMdiContainer = true;
             try
             {
                 Koneksi koneksi = new Koneksi();
@@ -41,8 +39,8 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 Artis tmpUser = Artis.CekLogin(textBoxUsername.Text, textBoxPassword.Text);
                 if (tmpUser != null)
                 {
-                    this.DialogResult = DialogResult.OK;
-                    FormTambahKontrak frm = (FormTambahKontrak)this.Owner;
+                    FormMenu frmMenu = (FormMenu)this.Owner;
+                    frmMenu.artis = tmpUser;
 
                     MessageBox.Show("Selamat menggunakan aplikasi.", "Informasi");
 
