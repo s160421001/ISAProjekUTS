@@ -37,13 +37,15 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBoxArtis = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 191);
+            this.dataGridView1.Location = new System.Drawing.Point(33, 255);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -53,7 +55,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // textBoxKriteria
             // 
             this.textBoxKriteria.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxKriteria.Location = new System.Drawing.Point(152, 133);
+            this.textBoxKriteria.Location = new System.Drawing.Point(158, 197);
             this.textBoxKriteria.Name = "textBoxKriteria";
             this.textBoxKriteria.Size = new System.Drawing.Size(676, 35);
             this.textBoxKriteria.TabIndex = 8;
@@ -62,7 +64,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 135);
+            this.label1.Location = new System.Drawing.Point(27, 199);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 33);
             this.label1.TabIndex = 7;
@@ -72,7 +74,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 24);
+            this.label2.Location = new System.Drawing.Point(27, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 33);
             this.label2.TabIndex = 10;
@@ -82,7 +84,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(157, 27);
+            this.radioButton1.Location = new System.Drawing.Point(158, 91);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(224, 31);
             this.radioButton1.TabIndex = 11;
@@ -94,7 +96,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(403, 27);
+            this.radioButton2.Location = new System.Drawing.Point(404, 91);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(271, 31);
             this.radioButton2.TabIndex = 12;
@@ -106,7 +108,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(157, 76);
+            this.radioButton3.Location = new System.Drawing.Point(158, 140);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(228, 31);
             this.radioButton3.TabIndex = 13;
@@ -118,7 +120,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(403, 76);
+            this.radioButton4.Location = new System.Drawing.Point(404, 140);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(228, 31);
             this.radioButton4.TabIndex = 14;
@@ -126,11 +128,33 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.radioButton4.Text = "Nama Acara (Z-A)";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(27, 39);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 33);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Artis";
+            // 
+            // comboBoxArtis
+            // 
+            this.comboBoxArtis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxArtis.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxArtis.FormattingEnabled = true;
+            this.comboBoxArtis.Location = new System.Drawing.Point(158, 36);
+            this.comboBoxArtis.Name = "comboBoxArtis";
+            this.comboBoxArtis.Size = new System.Drawing.Size(563, 40);
+            this.comboBoxArtis.TabIndex = 18;
+            // 
             // FormDaftarJadwal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 657);
+            this.ClientSize = new System.Drawing.Size(857, 723);
+            this.Controls.Add(this.comboBoxArtis);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
@@ -157,5 +181,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBoxArtis;
     }
 }

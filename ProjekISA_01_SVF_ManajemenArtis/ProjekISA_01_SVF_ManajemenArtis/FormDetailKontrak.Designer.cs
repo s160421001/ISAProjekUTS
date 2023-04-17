@@ -36,12 +36,14 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.buttonKembali = new System.Windows.Forms.Button();
             this.labelJudul = new System.Windows.Forms.Label();
             this.labelNamaPengaju = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelNamaArtis = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxIsi
             // 
             this.textBoxIsi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIsi.Location = new System.Drawing.Point(207, 142);
+            this.textBoxIsi.Location = new System.Drawing.Point(207, 181);
             this.textBoxIsi.Multiline = true;
             this.textBoxIsi.Name = "textBoxIsi";
             this.textBoxIsi.ReadOnly = true;
@@ -52,7 +54,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 142);
+            this.label3.Location = new System.Drawing.Point(35, 181);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(160, 33);
             this.label3.TabIndex = 9;
@@ -62,7 +64,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 91);
+            this.label2.Location = new System.Drawing.Point(71, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 33);
             this.label2.TabIndex = 8;
@@ -81,7 +83,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // buttonKembali
             // 
             this.buttonKembali.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKembali.Location = new System.Drawing.Point(612, 675);
+            this.buttonKembali.Location = new System.Drawing.Point(612, 714);
             this.buttonKembali.Name = "buttonKembali";
             this.buttonKembali.Size = new System.Drawing.Size(158, 48);
             this.buttonKembali.TabIndex = 13;
@@ -102,17 +104,39 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.labelNamaPengaju.AutoSize = true;
             this.labelNamaPengaju.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNamaPengaju.Location = new System.Drawing.Point(201, 91);
+            this.labelNamaPengaju.Location = new System.Drawing.Point(201, 130);
             this.labelNamaPengaju.Name = "labelNamaPengaju";
             this.labelNamaPengaju.Size = new System.Drawing.Size(202, 33);
             this.labelNamaPengaju.TabIndex = 15;
             this.labelNamaPengaju.Text = "NamaPengaju";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(110, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 33);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Artis";
+            // 
+            // labelNamaArtis
+            // 
+            this.labelNamaArtis.AutoSize = true;
+            this.labelNamaArtis.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNamaArtis.Location = new System.Drawing.Point(201, 85);
+            this.labelNamaArtis.Name = "labelNamaArtis";
+            this.labelNamaArtis.Size = new System.Drawing.Size(155, 33);
+            this.labelNamaArtis.TabIndex = 25;
+            this.labelNamaArtis.Text = "NamaArtis";
+            // 
             // FormDetailKontrak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 748);
+            this.ClientSize = new System.Drawing.Size(809, 785);
+            this.Controls.Add(this.labelNamaArtis);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.labelNamaPengaju);
             this.Controls.Add(this.labelJudul);
             this.Controls.Add(this.buttonKembali);
@@ -136,5 +160,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         private System.Windows.Forms.Button buttonKembali;
         private System.Windows.Forms.Label labelJudul;
         private System.Windows.Forms.Label labelNamaPengaju;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelNamaArtis;
     }
 }
