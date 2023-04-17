@@ -46,14 +46,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormDaftarJadwal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormDaftarJadwal.Designer.cs">
+      <DependentUpon>FormDaftarJadwal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDaftarKontrak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarKontrak.Designer.cs">
+      <DependentUpon>FormDaftarKontrak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetailJadwal-Kegiatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetailJadwal-Kegiatan.Designer.cs">
+      <DependentUpon>FormDetailJadwal-Kegiatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetailKontrak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetailKontrak.Designer.cs">
+      <DependentUpon>FormDetailKontrak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahKontrak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahKontrak.Designer.cs">
+      <DependentUpon>FormTambahKontrak.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormDaftarJadwal.resx">
+      <DependentUpon>FormDaftarJadwal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftarKontrak.resx">
+      <DependentUpon>FormDaftarKontrak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetailJadwal-Kegiatan.resx">
+      <DependentUpon>FormDetailJadwal-Kegiatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetailKontrak.resx">
+      <DependentUpon>FormDetailKontrak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahKontrak.resx">
+      <DependentUpon>FormTambahKontrak.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
