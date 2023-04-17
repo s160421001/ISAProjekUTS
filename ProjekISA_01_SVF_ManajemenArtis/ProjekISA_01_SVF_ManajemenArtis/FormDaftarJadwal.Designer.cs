@@ -29,7 +29,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewJadwal = new System.Windows.Forms.DataGridView();
             this.textBoxKriteria = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,18 +39,18 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxArtis = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJadwal)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewJadwal
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(33, 255);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(796, 437);
-            this.dataGridView1.TabIndex = 9;
+            this.dataGridViewJadwal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewJadwal.Location = new System.Drawing.Point(33, 255);
+            this.dataGridViewJadwal.Name = "dataGridViewJadwal";
+            this.dataGridViewJadwal.RowHeadersWidth = 62;
+            this.dataGridViewJadwal.RowTemplate.Height = 28;
+            this.dataGridViewJadwal.Size = new System.Drawing.Size(796, 437);
+            this.dataGridViewJadwal.TabIndex = 9;
             // 
             // textBoxKriteria
             // 
@@ -160,12 +160,12 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewJadwal);
             this.Controls.Add(this.textBoxKriteria);
             this.Controls.Add(this.label1);
             this.Name = "FormDaftarJadwal";
             this.Text = "FormDaftarJadwal";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJadwal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,7 +173,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewJadwal;
         private System.Windows.Forms.TextBox textBoxKriteria;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

@@ -54,6 +54,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>db.settings</DependentUpon>
     </Compile>
+    <Compile Include="FormCekArtis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCekArtis.Designer.cs">
+      <DependentUpon>FormCekArtis.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDaftarJadwal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,12 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahKegiatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahKegiatan.Designer.cs">
+      <DependentUpon>FormTambahKegiatan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTambahKontrak.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +110,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCekArtis.resx">
+      <DependentUpon>FormCekArtis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDaftarJadwal.resx">
       <DependentUpon>FormDaftarJadwal.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahKegiatan.resx">
+      <DependentUpon>FormTambahKegiatan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahKontrak.resx">
       <DependentUpon>FormTambahKontrak.cs</DependentUpon>

@@ -31,8 +31,8 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         {
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxKriteria = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridViewKontrak = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKontrak)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -53,27 +53,27 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.textBoxKriteria.Size = new System.Drawing.Size(578, 35);
             this.textBoxKriteria.TabIndex = 5;
             // 
-            // dataGridView1
+            // dataGridViewKontrak
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(35, 96);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(698, 358);
-            this.dataGridView1.TabIndex = 6;
+            this.dataGridViewKontrak.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewKontrak.Location = new System.Drawing.Point(35, 96);
+            this.dataGridViewKontrak.Name = "dataGridViewKontrak";
+            this.dataGridViewKontrak.RowHeadersWidth = 62;
+            this.dataGridViewKontrak.RowTemplate.Height = 28;
+            this.dataGridViewKontrak.Size = new System.Drawing.Size(698, 358);
+            this.dataGridViewKontrak.TabIndex = 6;
             // 
             // FormDaftarKontrak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 485);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewKontrak);
             this.Controls.Add(this.textBoxKriteria);
             this.Controls.Add(this.label1);
             this.Name = "FormDaftarKontrak";
             this.Text = "Daftar Kontrak";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKontrak)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,6 +83,6 @@ namespace ProjekISA_01_SVF_ManajemenArtis
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxKriteria;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewKontrak;
     }
 }
