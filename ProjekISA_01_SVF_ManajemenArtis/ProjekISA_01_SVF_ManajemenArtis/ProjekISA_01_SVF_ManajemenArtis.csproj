@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ManajemenArtis_Lib">
+      <HintPath>..\ManajemenArtis_Lib\ManajemenArtis_Lib\bin\Debug\ManajemenArtis_Lib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
