@@ -11,10 +11,15 @@ namespace ManajemenArtis_Lib
 {
     public class Koneksi
     {
+        #region DATAMEMBER
         private MySqlConnection koneksiDb;
+        #endregion
 
+        #region PROPERTIES
         public MySqlConnection KoneksiDb { get => koneksiDb; private set => koneksiDb = value; }
+        #endregion
 
+        #region CONSTRUCTOR
         public Koneksi(string pServer, string pDatabase, string pUsername, string pPassword)
         {
             string strCon = "server=" + pServer + ";database=" + pDatabase + ";uid=" + pUsername + ";password=" + pPassword;
@@ -24,7 +29,9 @@ namespace ManajemenArtis_Lib
 
             Connect();
         }
+        #endregion
 
+        #region METHODS
         public Koneksi()
         {
             Configuration myConf = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
@@ -55,7 +62,7 @@ namespace ManajemenArtis_Lib
             KoneksiDb.Open();
         }
 
-        public static MySqlDataReader AmbilData(string sql)
+        public static MySqlDataReader JalankanQuery(string sql)
         {
             Koneksi koneksi = new Koneksi();
             MySqlCommand command = new MySqlCommand(sql, koneksi.koneksiDb);
@@ -69,5 +76,6 @@ namespace ManajemenArtis_Lib
             MySqlCommand command = new MySqlCommand(sql, koneksi.koneksiDb);
             return command.ExecuteNonQuery();
         }
+        #endregion
     }
 }

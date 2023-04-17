@@ -33,5 +33,31 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 MessageBox.Show("Koneksi Gagal" + ex.Message);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Artis tmpUser = Artis.CekLogin(textBoxUsername.Text, textBoxPassword.Text);
+                if (tmpUser != null)
+                {
+                    this.DialogResult = DialogResult.OK;
+                    FormTambahKontrak frm = (FormTambahKontrak)this.Owner;
+
+                    MessageBox.Show("Selamat menggunakan aplikasi.", "Informasi");
+
+                    DialogResult = DialogResult.OK;
+                    Close();
+                }
+                else
+                {
+                    throw new Exception("Kombinasi username dan password tidak ditemukan");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+        }
     }
 }
