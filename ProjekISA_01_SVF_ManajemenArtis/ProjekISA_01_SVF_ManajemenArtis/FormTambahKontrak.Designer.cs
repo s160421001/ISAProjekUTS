@@ -42,9 +42,9 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(94, 42);
+            this.label1.Location = new System.Drawing.Point(84, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 32);
+            this.label1.Size = new System.Drawing.Size(76, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Judul";
             // 
@@ -52,9 +52,9 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(63, 92);
+            this.label2.Location = new System.Drawing.Point(56, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 32);
+            this.label2.Size = new System.Drawing.Size(106, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "Pengaju";
             // 
@@ -62,52 +62,57 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 143);
+            this.label3.Location = new System.Drawing.Point(24, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 32);
+            this.label3.Size = new System.Drawing.Size(139, 28);
             this.label3.TabIndex = 2;
             this.label3.Text = "Isi Kontrak";
             // 
             // buttonTambah
             // 
             this.buttonTambah.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTambah.Location = new System.Drawing.Point(608, 671);
+            this.buttonTambah.Location = new System.Drawing.Point(540, 537);
+            this.buttonTambah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(158, 48);
+            this.buttonTambah.Size = new System.Drawing.Size(140, 38);
             this.buttonTambah.TabIndex = 3;
             this.buttonTambah.Text = "Tambah";
             this.buttonTambah.UseVisualStyleBackColor = true;
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // textBoxJudul
             // 
             this.textBoxJudul.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxJudul.Location = new System.Drawing.Point(203, 42);
+            this.textBoxJudul.Location = new System.Drawing.Point(180, 34);
+            this.textBoxJudul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxJudul.Name = "textBoxJudul";
-            this.textBoxJudul.Size = new System.Drawing.Size(563, 35);
+            this.textBoxJudul.Size = new System.Drawing.Size(501, 30);
             this.textBoxJudul.TabIndex = 4;
             // 
             // textBoxPengaju
             // 
             this.textBoxPengaju.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPengaju.Location = new System.Drawing.Point(203, 92);
+            this.textBoxPengaju.Location = new System.Drawing.Point(180, 74);
+            this.textBoxPengaju.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPengaju.Name = "textBoxPengaju";
-            this.textBoxPengaju.Size = new System.Drawing.Size(563, 35);
+            this.textBoxPengaju.Size = new System.Drawing.Size(501, 30);
             this.textBoxPengaju.TabIndex = 5;
             // 
             // textBoxIsi
             // 
             this.textBoxIsi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIsi.Location = new System.Drawing.Point(203, 143);
+            this.textBoxIsi.Location = new System.Drawing.Point(180, 114);
+            this.textBoxIsi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxIsi.Multiline = true;
             this.textBoxIsi.Name = "textBoxIsi";
-            this.textBoxIsi.Size = new System.Drawing.Size(563, 508);
+            this.textBoxIsi.Size = new System.Drawing.Size(501, 407);
             this.textBoxIsi.TabIndex = 6;
             // 
             // FormTambahKontrak
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 742);
+            this.ClientSize = new System.Drawing.Size(711, 594);
             this.Controls.Add(this.textBoxIsi);
             this.Controls.Add(this.textBoxPengaju);
             this.Controls.Add(this.textBoxJudul);
@@ -115,8 +120,10 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormTambahKontrak";
             this.Text = "Tambah Kontrak";
+            this.Load += new System.EventHandler(this.FormTambahKontrak_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

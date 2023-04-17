@@ -16,5 +16,15 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         {
             InitializeComponent();
         }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormTambahKontrak_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
