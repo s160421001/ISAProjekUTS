@@ -80,7 +80,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             // buttonKembali
             // 
-            this.buttonKembali.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonKembali.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKembali.Location = new System.Drawing.Point(612, 675);
             this.buttonKembali.Name = "buttonKembali";
             this.buttonKembali.Size = new System.Drawing.Size(158, 48);
