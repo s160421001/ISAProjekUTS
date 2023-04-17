@@ -30,7 +30,7 @@ namespace ManajemenArtis_Lib
             Configuration myConf = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             ConfigurationSectionGroup userSettings = myConf.SectionGroups["userSettings"];
 
-            var settingsSection = userSettings.Sections["Latihan_11A.db"] as ClientSettingsSection;
+            var settingsSection = userSettings.Sections["ProjekISA_01_SVF_ManajemenArtis.db"] as ClientSettingsSection;
 
             string DbServer = settingsSection.Settings.Get("DbServer").Value.ValueXml.InnerText;
             string DbName = settingsSection.Settings.Get("DbName").Value.ValueXml.InnerText;
