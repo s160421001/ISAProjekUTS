@@ -86,6 +86,36 @@ namespace ManajemenArtis_Lib
             }
             return null;
         }
+
+        public static List<Artis> BacaData(string criteriaName, string criteriaValue)
+        {
+            string sql = "SELECT id, nama, tanggal_lahir, tanggal_masuk, username, status_manajer FROM artis";
+            if (criteriaName == "")
+            {
+                sql += ";";
+            }
+            else
+            {
+                sql += "WHERE " + criteriaName + " LIKE '%" + criteriaValue + "%';";
+            }
+            MySqlDataReader result = Koneksi.JalankanQuery(sql);
+            List<Artis> tmpList = new List<Artis>();
+
+            while (result.Read())
+            {
+                Artis tmpData = new Artis(
+                    result.GetInt32("id"),
+                    result.GetString("nama"),
+                    result.GetDateTime("tanggal_lahir"),
+                    result.GetDateTime("tanggal_masuk"),
+                    result.GetString("username"),
+                    "",
+                    (result.GetString("status_manajer") == "kosong" ? status_manajer.kosong : status_manajer.aktif));
+
+                tmpList.Add(tmpData);
+            }
+            return tmpList;
+        }
         #endregion
     }
 }

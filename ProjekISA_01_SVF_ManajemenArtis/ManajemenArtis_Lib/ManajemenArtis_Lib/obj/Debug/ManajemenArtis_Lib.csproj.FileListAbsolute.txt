@@ -6,3 +6,10 @@ C:\Users\Steven Christopher\Desktop\UBAYA\Semester 4\Information Security and As
 C:\Users\Steven Christopher\Desktop\UBAYA\Semester 4\Information Security and Assurance\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ManajemenArtis_Lib\ManajemenArtis_Lib\obj\Debug\ManajemenArtis_Lib.csproj.CopyComplete
 C:\Users\Steven Christopher\Desktop\UBAYA\Semester 4\Information Security and Assurance\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ManajemenArtis_Lib\ManajemenArtis_Lib\obj\Debug\ManajemenArtis_Lib.dll
 C:\Users\Steven Christopher\Desktop\UBAYA\Semester 4\Information Security and Assurance\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ManajemenArtis_Lib\ManajemenArtis_Lib\obj\Debug\ManajemenArtis_Lib.pdb
+C:\Users\User\Documents\GitHub\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ManajemenArtis_Lib\ManajemenArtis_Lib\bin\Debug\ManajemenArtis_Lib.dll
+C:\Users\User\Documents\GitHub\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ManajemenArtis_Lib\ManajemenArtis_Lib\bin\Debug\ManajemenArtis_Lib.pdb
+C:\Users\User\Documents\GitHub\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ManajemenArtis_Lib\ManajemenArtis_Lib\obj\Debug\ManajemenArtis_Lib.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ManajemenArtis_Lib\ManajemenArtis_Lib\obj\Debug\ManajemenArtis_Lib.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ManajemenArtis_Lib\ManajemenArtis_Lib\obj\Debug\ManajemenArtis_Lib.csproj.CopyComplete
+C:\Users\User\Documents\GitHub\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ManajemenArtis_Lib\ManajemenArtis_Lib\obj\Debug\ManajemenArtis_Lib.dll
+C:\Users\User\Documents\GitHub\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ManajemenArtis_Lib\ManajemenArtis_Lib\obj\Debug\ManajemenArtis_Lib.pdb

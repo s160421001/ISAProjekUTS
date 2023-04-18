@@ -15,6 +15,8 @@ namespace ProjekISA_01_SVF_ManajemenArtis
     public partial class FormMenu : Form
     {
         public Artis artis;
+        public Manager manager;
+
         public FormMenu()
         {
             InitializeComponent();
@@ -25,25 +27,47 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.WindowState = FormWindowState.Maximized;
             this.IsMdiContainer = true;
 
+            FormLogin frmLogin = new FormLogin();
+            frmLogin.Owner = this;
             try
-            {
-                Koneksi koneksi = new Koneksi();
-
-                FormLogin frmLogin = new FormLogin();
-                frmLogin.Owner = this;
+            {              
                 if (frmLogin.ShowDialog() == DialogResult.OK)
                 {
-                    labelNama.Text = artis.Nama;
+                    //check artis atau manager
+                    if (artis != null) labelNama.Text = artis.Nama;
+                    else if (manager != null) labelNama.Text = manager.Nama;
+                    CekAccessControl();
                 }
                 else
                 {//jika login gagal
                     MessageBox.Show("Gagal Login");
                     Application.Exit();
                 }
-        }
+            }
             catch
             {
+                this.Close();
+            }
+        }
 
+        private void CekAccessControl()
+        {
+            if (manager != null)
+            {
+                if (manager.Title == jabatan.manager)
+                {
+                    homeToolStripMenuItem.Visible = true;
+                    
+                }
+                else if (manager.Title == jabatan.superAdmin)
+                {
+                    homeToolStripMenuItem.Visible = true;
+                }
+            }
+            else
+            {
+                //kalau login sebagai artis
+                homeToolStripMenuItem.Visible = true;
             }
         }
     }

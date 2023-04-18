@@ -49,7 +49,21 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 }
                 else
                 {
-                    throw new Exception("Kombinasi username dan password tidak ditemukan");
+                    Manager tmp = Manager.CekLogin(textBoxUsername.Text, textBoxPassword.Text);
+                    if (tmp != null)
+                    {
+                        FormMenu frmMenu = (FormMenu)this.Owner;
+                        frmMenu.manager = tmp;
+
+                        MessageBox.Show("Selamat menggunakan aplikasi.", "Informasi");
+
+                        DialogResult = DialogResult.OK;
+                        Close();
+                    }
+                    else
+                    {
+                        throw new Exception("Kombinasi username dan password tidak ditemukan");
+                    }
                 }
             }
             catch (Exception ex)
