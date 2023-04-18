@@ -27,27 +27,15 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.WindowState = FormWindowState.Maximized;
             this.IsMdiContainer = true;
 
-            FormLogin frmLogin = new FormLogin();
-            frmLogin.Owner = this;
-            try
-            {              
-                if (frmLogin.ShowDialog() == DialogResult.OK)
-                {
-                    //check artis atau manager
-                    if (artis != null) labelNama.Text = artis.Nama;
-                    else if (manager != null) labelNama.Text = manager.Nama;
-                    CekAccessControl();
-                }
-                else
-                {//jika login gagal
-                    MessageBox.Show("Gagal Login");
-                    Application.Exit();
-                }
-            }
-            catch
+            if(artis != null)
             {
-                this.Close();
+                labelNama.Text = artis.Nama;
             }
+            else
+            {
+                labelNama.Text = manager.Nama;
+            }
+            
         }
 
         private void CekAccessControl()

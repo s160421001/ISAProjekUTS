@@ -23,6 +23,7 @@ namespace ManajemenArtis_Lib
         private string username;
         private string password;
         private status_manajer status;
+        private Manager manager;
         #endregion
 
         #region CONSTRUCTOR
@@ -36,7 +37,7 @@ namespace ManajemenArtis_Lib
             this.Password = "";
         }
 
-        public Artis(int id, string nama, DateTime tanggal_lahir, DateTime tanggal_masuk, string username, string password, status_manajer status)
+        public Artis(int id, string nama, DateTime tanggal_lahir, DateTime tanggal_masuk, string username, string password, status_manajer status, Manager manager)
         {
             this.Id = id;
             this.Nama = nama;
@@ -45,6 +46,7 @@ namespace ManajemenArtis_Lib
             this.Username = username;
             this.Password = password;
             this.Status = status;
+            this.Manager = manager;
         }
         #endregion
 
@@ -56,6 +58,7 @@ namespace ManajemenArtis_Lib
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
         public status_manajer Status { get => status; set => status = value; }
+        public Manager Manager { get => manager; set => manager = value; }
         #endregion
 
         #region METHODS
@@ -63,8 +66,8 @@ namespace ManajemenArtis_Lib
         {
             //Password tidak diambil karena tidak perlu menyimpan password pada obyek artis untuk alasan keamanan
             string sql = "SELECT id, nama, tanggal_lahir, tanggal_masuk, username, status_manajer " +
-                " FROM artis " +
-                " WHERE username='" + username + "' AND password='" + password + "';";
+                "FROM artis " +
+                "WHERE username='" + username + "' AND password='" + password + "';";
 
             MySqlDataReader result = Koneksi.JalankanQuery(sql);
 
@@ -80,42 +83,40 @@ namespace ManajemenArtis_Lib
                     result.GetDateTime("tanggal_masuk"),
                     result.GetString("username"),
                     "",
-                    tmpStatus);
-
-                return tmp;
+                    tmpStatus, null);
             }
-            return null;
+            return tmp;
         }
 
-        public static List<Artis> BacaData(string criteriaName, string criteriaValue)
-        {
-            string sql = "SELECT id, nama, tanggal_lahir, tanggal_masuk, username, status_manajer FROM artis";
-            if (criteriaName == "")
-            {
-                sql += ";";
-            }
-            else
-            {
-                sql += "WHERE " + criteriaName + " LIKE '%" + criteriaValue + "%';";
-            }
-            MySqlDataReader result = Koneksi.JalankanQuery(sql);
-            List<Artis> tmpList = new List<Artis>();
+        //public static List<Artis> BacaData(string criteriaName, string criteriaValue)
+        //{
+        //    string sql = "SELECT id, nama, tanggal_lahir, tanggal_masuk, username, status_manajer FROM artis";
+        //    if (criteriaName == "")
+        //    {
+        //        sql += ";";
+        //    }
+        //    else
+        //    {
+        //        sql += "WHERE " + criteriaName + " LIKE '%" + criteriaValue + "%';";
+        //    }
+        //    MySqlDataReader result = Koneksi.JalankanQuery(sql);
+        //    List<Artis> tmpList = new List<Artis>();
 
-            while (result.Read())
-            {
-                Artis tmpData = new Artis(
-                    result.GetInt32("id"),
-                    result.GetString("nama"),
-                    result.GetDateTime("tanggal_lahir"),
-                    result.GetDateTime("tanggal_masuk"),
-                    result.GetString("username"),
-                    "",
-                    (result.GetString("status_manajer") == "kosong" ? status_manajer.kosong : status_manajer.aktif));
+        //    while (result.Read())
+        //    {
+        //        Artis tmpData = new Artis(
+        //            result.GetInt32("id"),
+        //            result.GetString("nama"),
+        //            result.GetDateTime("tanggal_lahir"),
+        //            result.GetDateTime("tanggal_masuk"),
+        //            result.GetString("username"),
+        //            "",
+        //            (result.GetString("status_manajer") == "kosong" ? status_manajer.kosong : status_manajer.aktif));
 
-                tmpList.Add(tmpData);
-            }
-            return tmpList;
-        }
+        //        tmpList.Add(tmpData);
+        //    }
+        //    return tmpList;
+        //}
         #endregion
     }
 }

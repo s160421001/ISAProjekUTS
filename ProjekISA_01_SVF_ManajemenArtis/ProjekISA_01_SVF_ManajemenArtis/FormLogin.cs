@@ -36,34 +36,32 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         {
             try
             {
-                Artis tmpUser = Artis.CekLogin(textBoxUsername.Text, textBoxPassword.Text);
-                if (tmpUser != null)
+                Artis tmpArtis = Artis.CekLogin(textBoxUsername.Text, textBoxPassword.Text);
+                if (tmpArtis.Username == "")
                 {
-                    FormMenu frmMenu = (FormMenu)this.Owner;
-                    frmMenu.artis = tmpUser;
-
-                    MessageBox.Show("Selamat menggunakan aplikasi.", "Informasi");
-
-                    DialogResult = DialogResult.OK;
-                    Close();
-                }
-                else
-                {
-                    Manager tmp = Manager.CekLogin(textBoxUsername.Text, textBoxPassword.Text);
-                    if (tmp != null)
+                    Manager tmpManager = Manager.CekLogin(textBoxUsername.Text, textBoxPassword.Text);
+                    if (tmpManager.Username == "")
                     {
-                        FormMenu frmMenu = (FormMenu)this.Owner;
-                        frmMenu.manager = tmp;
-
-                        MessageBox.Show("Selamat menggunakan aplikasi.", "Informasi");
-
-                        DialogResult = DialogResult.OK;
-                        Close();
+                        MessageBox.Show("Kombinasi username dan password tidak ditemukan", "Informasi");
                     }
                     else
                     {
-                        throw new Exception("Kombinasi username dan password tidak ditemukan");
+                        MessageBox.Show("Selamat menggunakan aplikasi.", "Informasi");
+                        FormMenu frmMenu = new FormMenu();
+
+                        frmMenu.manager = tmpManager;
+                        frmMenu.ShowDialog();
+                        this.Close();
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Selamat menggunakan aplikasi.", "Informasi");
+                    FormMenu frmMenu = new FormMenu();
+
+                    frmMenu.artis = tmpArtis;
+                    frmMenu.ShowDialog();
+                    this.Close();
                 }
             }
             catch (Exception ex)
