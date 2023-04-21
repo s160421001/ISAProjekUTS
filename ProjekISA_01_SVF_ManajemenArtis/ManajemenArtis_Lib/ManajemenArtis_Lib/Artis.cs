@@ -35,6 +35,7 @@ namespace ManajemenArtis_Lib
             this.Tanggal_masuk = DateTime.Now;
             this.Username = "";
             this.Password = "";
+            this.Manager = manager;
         }
 
         public Artis(int id, string nama, DateTime tanggal_lahir, DateTime tanggal_masuk, string username, string password, status_manajer status, Manager manager)
@@ -88,35 +89,44 @@ namespace ManajemenArtis_Lib
             return tmp;
         }
 
-        //public static List<Artis> BacaData(string criteriaName, string criteriaValue)
-        //{
-        //    string sql = "SELECT id, nama, tanggal_lahir, tanggal_masuk, username, status_manajer FROM artis";
-        //    if (criteriaName == "")
-        //    {
-        //        sql += ";";
-        //    }
-        //    else
-        //    {
-        //        sql += "WHERE " + criteriaName + " LIKE '%" + criteriaValue + "%';";
-        //    }
-        //    MySqlDataReader result = Koneksi.JalankanQuery(sql);
-        //    List<Artis> tmpList = new List<Artis>();
+        public static List<Artis> BacaData(string criteriaName, string criteriaValue)
+        {
+            string sql = "SELECT id, nama, tanggal_lahir, tanggal_masuk, username, status_manajer, manajer_id from artis"; 
+            if (criteriaName == "")
+            {
+                sql += ";";
+            }
+            else
+            {
+                sql += " WHERE " + criteriaName + " LIKE '%" + criteriaValue + "%';";
+            }
+            MySqlDataReader result = Koneksi.JalankanQuery(sql);
+            List<Artis> tmpList = new List<Artis>();
 
-        //    while (result.Read())
-        //    {
-        //        Artis tmpData = new Artis(
-        //            result.GetInt32("id"),
-        //            result.GetString("nama"),
-        //            result.GetDateTime("tanggal_lahir"),
-        //            result.GetDateTime("tanggal_masuk"),
-        //            result.GetString("username"),
-        //            "",
-        //            (result.GetString("status_manajer") == "kosong" ? status_manajer.kosong : status_manajer.aktif));
+            while (result.Read())
+            {
+                //Manager tmpManajer = new Manager(result.GetInt32("id"),
+                //    result.GetString("nama"),
+                //    result.GetDateTime("tanggal_lahir"),
+                //    result.GetDateTime("tanggal_masuk"),
+                //    result.GetString("username"),
+                //    "",
+                //    (result.GetString("jabatan") == "manager" ? jabatan.manager : jabatan.superAdmin));
 
-        //        tmpList.Add(tmpData);
-        //    }
-        //    return tmpList;
-        //}
+                Artis tmpData = new Artis(
+                    result.GetInt32("id"),
+                    result.GetString("nama"),
+                    result.GetDateTime("tanggal_lahir"),
+                    result.GetDateTime("tanggal_masuk"),
+                    result.GetString("username"),
+                    "",
+                    (result.GetString("status_manajer") == "kosong" ? status_manajer.kosong : status_manajer.aktif),
+                    null);
+
+                tmpList.Add(tmpData);
+            }
+            return tmpList;
+        }
         #endregion
     }
 }
