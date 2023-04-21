@@ -35,6 +35,7 @@ namespace ManajemenArtis_Lib
             this.Tanggal_masuk = DateTime.Now;
             this.Username = "";
             this.Password = "";
+            this.Manager = manager;
         }
 
         public Artis(int id, string nama, DateTime tanggal_lahir, DateTime tanggal_masuk, string username, string password, status_manajer status, Manager manager)
@@ -90,29 +91,27 @@ namespace ManajemenArtis_Lib
 
         public static List<Artis> BacaData(string criteriaName, string criteriaValue)
         {
-            //string sql = "SELECT m.id, m.nama, m.tanggal_lahir, m.tanggal_masuk, m.username, m.jabatan " +
-            //    "FROM manajer as m " +
-            //    "INNER JOIN artis as a on m.artis_id = a.id " +
-            //    "WHERE m.username='" + username + "' AND m.password='" + password + "';";
-            string sql = "SELECT a.id, a.nama, a.tanggal_lahir, a.tanggal_masuk, a.username, a.status_manajer " +
-                "FROM artis as a" +
-                "INNER JOIN manajer as m on m.id=a.manajer_id";
+            string sql = "SELECT id, nama, tanggal_lahir, tanggal_masuk, username, status_manajer, manajer_id from artis"; 
             if (criteriaName == "")
             {
                 sql += ";";
             }
             else
             {
-                sql += "WHERE " + criteriaName + " LIKE '%" + criteriaValue + "%';";
+                sql += " WHERE " + criteriaName + " LIKE '%" + criteriaValue + "%';";
             }
             MySqlDataReader result = Koneksi.JalankanQuery(sql);
             List<Artis> tmpList = new List<Artis>();
 
             while (result.Read())
             {
-                Manager tmpMan = new Manager();
-                tmpMan.Id = result.GetInt32("manajer_id");
-                tmpMan.Nama = result.GetString("nama");
+                //Manager tmpManajer = new Manager(result.GetInt32("id"),
+                //    result.GetString("nama"),
+                //    result.GetDateTime("tanggal_lahir"),
+                //    result.GetDateTime("tanggal_masuk"),
+                //    result.GetString("username"),
+                //    "",
+                //    (result.GetString("jabatan") == "manager" ? jabatan.manager : jabatan.superAdmin));
 
                 Artis tmpData = new Artis(
                     result.GetInt32("id"),
@@ -122,7 +121,7 @@ namespace ManajemenArtis_Lib
                     result.GetString("username"),
                     "",
                     (result.GetString("status_manajer") == "kosong" ? status_manajer.kosong : status_manajer.aktif),
-                    tmpMan);
+                    null);
 
                 tmpList.Add(tmpData);
             }

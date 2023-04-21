@@ -60,12 +60,7 @@ namespace ManajemenArtis_Lib
         #region methods
         public static Manager CekLogin(string username, string password)
         {
-            //Password tidak diambil karena tidak perlu menyimpan password pada obyek artis untuk alasan keamanan
-            //string sql = "SELECT m.id, m.nama, m.tanggal_lahir, m.tanggal_masuk, m.username, m.jabatan " +
-            //    "FROM manajer as m " +
-            //    "INNER JOIN artis as a on m.artis_id = a.id " +
-            //    "WHERE m.username='" + username + "' AND m.password='" + password + "';";
-
+            //Password tidak diambil karena tidak perlu menyimpan password pada obyek manajer untuk alasan keamanan
             string sql = "SELECT id, nama, tanggal_lahir, tanggal_masuk, username, jabatan " +
                     "FROM manajer " +
                     "WHERE username='" + username + "' AND password='" + password + "';";

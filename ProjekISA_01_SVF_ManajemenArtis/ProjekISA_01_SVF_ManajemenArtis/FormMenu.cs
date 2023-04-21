@@ -58,5 +58,21 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 homeToolStripMenuItem.Visible = true;
             }
         }
+
+        private void cekArtisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormCekArtis"];
+            if (form == null)
+            {
+                FormCekArtis formCekArtis = new FormCekArtis();
+                formCekArtis.MdiParent = this;
+                formCekArtis.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
     }
 } 

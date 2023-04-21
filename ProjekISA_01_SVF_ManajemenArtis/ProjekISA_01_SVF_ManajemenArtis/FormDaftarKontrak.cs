@@ -16,5 +16,10 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         {
             InitializeComponent();
         }
+
+        private void dataGridViewKontrak_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
