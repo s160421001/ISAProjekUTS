@@ -118,6 +118,30 @@ namespace ManajemenArtis_Lib
             }
             return tmpList;
         }
+
+        public static List<Manager> BacaDataKhususArtis()
+        {
+            string sql = "SELECT id, nama, tanggal_lahir, tanggal_masuk, username, jabatan  " +
+               " FROM manajer WHERE jabatan = 'biasa' and id != 0";
+
+            MySqlDataReader result = Koneksi.JalankanQuery(sql);
+            List<Manager> tmpList = new List<Manager>();
+            Manager tmp = new Manager();
+            while (result.Read())
+            {
+                tmp = new Manager(
+                    result.GetInt32("id"),
+                    result.GetString("nama"),
+                    result.GetDateTime("tanggal_lahir"),
+                    result.GetDateTime("tanggal_masuk"),
+                    result.GetString("username"),
+                    "",
+                    (result.GetString("jabatan") == "biasa" ? jabatan.biasa : jabatan.superAdmin));
+
+                tmpList.Add(tmp);
+            }
+            return tmpList;
+        }
         #endregion
     }
 }

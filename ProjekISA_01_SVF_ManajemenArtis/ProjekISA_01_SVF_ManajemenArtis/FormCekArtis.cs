@@ -54,7 +54,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 dataGridViewArtis.DataSource = null;
             }
         }
-    
+
 
         private void CreateGridButtons()
         {
@@ -131,3 +131,4 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         }
     }
 }
+

@@ -30,10 +30,13 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             if(artis != null)
             {
                 labelNama.Text = artis.Nama;
+                labelManager.Text = artis.Manager.Nama;
             }
             else
             {
                 labelNama.Text = manager.Nama;
+                label2.Visible = false;
+                labelManager.Visible = false;
             }
             CekAccessControl();
 
@@ -76,8 +79,9 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                     tambahKontrakToolStripMenuItem.Visible = true;
                     jadwalToolStripMenuItem.Visible = true;
                     manajemenToolStripMenuItem.Visible = true;
-                    cekArtisToolStripMenuItem.Visible = true;
                     pesanMasukToolStripMenuItem.Visible = true;
+                    cekArtisToolStripMenuItem.Visible = true;
+                    cekManajerToolStripMenuItem.Visible = true;
                 }
             }
             else
@@ -87,8 +91,15 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 if(artis.Manager.Id != 0)
                 {
                     kontrakToolStripMenuItem.Visible = true;
+                    jadwalToolStripMenuItem.Visible = true;
                     manajemenToolStripMenuItem.Visible = true;
                     pesanMasukToolStripMenuItem.Visible = true;
+                    cekManajerToolStripMenuItem.Visible = true;
+                }
+                else
+                {
+                    manajemenToolStripMenuItem.Visible = true;
+                    cekManajerToolStripMenuItem.Visible = true;
                 }
             }
         }
@@ -114,6 +125,23 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         private void cekKontrakToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cekManajerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormCekManajer"];
+            if (form == null)
+            {
+                FormCekManajer formCekManajer = new FormCekManajer();
+                formCekManajer.MdiParent = this;
+                formCekManajer.manager = manager;
+                formCekManajer.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
         }
     }
 } 

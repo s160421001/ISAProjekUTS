@@ -60,6 +60,12 @@
     <Compile Include="FormCekArtis.Designer.cs">
       <DependentUpon>FormCekArtis.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCekManajer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCekManajer.Designer.cs">
+      <DependentUpon>FormCekManajer.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDaftarJadwal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCekArtis.resx">
       <DependentUpon>FormCekArtis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCekManajer.resx">
+      <DependentUpon>FormCekManajer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDaftarJadwal.resx">
       <DependentUpon>FormDaftarJadwal.cs</DependentUpon>

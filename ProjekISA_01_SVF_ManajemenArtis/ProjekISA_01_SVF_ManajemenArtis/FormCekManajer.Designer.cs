@@ -1,7 +1,7 @@
 ﻿
 namespace ProjekISA_01_SVF_ManajemenArtis
 {
-    partial class FormCekArtis
+    partial class FormCekManajer
     {
         /// <summary>
         /// Required designer variable.
@@ -29,57 +29,53 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCekArtis));
-            this.dataGridViewArtis = new System.Windows.Forms.DataGridView();
+            this.dataGridViewManajer = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArtis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewManajer)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridViewArtis
+            // dataGridViewManajer
             // 
-            this.dataGridViewArtis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewArtis.Location = new System.Drawing.Point(29, 77);
-            this.dataGridViewArtis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridViewArtis.Name = "dataGridViewArtis";
-            this.dataGridViewArtis.RowHeadersWidth = 62;
-            this.dataGridViewArtis.RowTemplate.Height = 28;
-            this.dataGridViewArtis.Size = new System.Drawing.Size(620, 286);
-            this.dataGridViewArtis.TabIndex = 9;
-            this.dataGridViewArtis.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewArtis_CellContentClick);
+            this.dataGridViewManajer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewManajer.Location = new System.Drawing.Point(26, 72);
+            this.dataGridViewManajer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewManajer.Name = "dataGridViewManajer";
+            this.dataGridViewManajer.RowHeadersWidth = 62;
+            this.dataGridViewManajer.RowTemplate.Height = 28;
+            this.dataGridViewManajer.Size = new System.Drawing.Size(620, 286);
+            this.dataGridViewManajer.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Navy;
             this.label3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(29, 18);
+            this.label3.Location = new System.Drawing.Point(26, 16);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(620, 44);
-            this.label3.TabIndex = 63;
-            this.label3.Text = "DAFTAR ARTIS";
+            this.label3.TabIndex = 64;
+            this.label3.Text = "DAFTAR MANAJER";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FormCekArtis
+            // FormCekManajer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 389);
+            this.ClientSize = new System.Drawing.Size(674, 385);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridViewArtis);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FormCekArtis";
-            this.Text = "Cek Artis";
-            this.Load += new System.EventHandler(this.FormCekArtis_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArtis)).EndInit();
+            this.Controls.Add(this.dataGridViewManajer);
+            this.Name = "FormCekManajer";
+            this.Text = "FormCekManajer";
+            this.Load += new System.EventHandler(this.FormCekManajer_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewManajer)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridViewArtis;
+        private System.Windows.Forms.DataGridView dataGridViewManajer;
         private System.Windows.Forms.Label label3;
     }
 }
