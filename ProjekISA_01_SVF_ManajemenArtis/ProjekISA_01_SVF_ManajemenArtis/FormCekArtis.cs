@@ -56,26 +56,35 @@ namespace ProjekISA_01_SVF_ManajemenArtis
 
         private void dataGridViewArtis_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.ColumnIndex == dataGridViewArtis.Columns["gridButtonKontrak"].Index && e.RowIndex >= 0)
+            {
+                if (MessageBox.Show("Apakah anda mau mengkontrak artis ini?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    try
+                    {
+                        List<Artis> tmpArtis = Film.BacaData("judul_film",
+                            dataGridViewTiket.CurrentRow.Cells["film"].Value.ToString());
 
+                        string statusManajer = "aktif";
+
+                        Tiket tmpTiket = new Tiket(
+                            int.Parse(dataGridViewTiket.CurrentRow.Cells["id"].Value.ToString()),
+                            DateTime.Parse(dataGridViewTiket.CurrentRow.Cells["tgl_beli"].Value.ToString()),
+                            int.Parse(dataGridViewTiket.CurrentRow.Cells["slot_jadwal"].Value.ToString()),
+                            int.Parse(dataGridViewTiket.CurrentRow.Cells["no_kursi"].Value.ToString()),
+                            int.Parse(dataGridViewTiket.CurrentRow.Cells["ruang_bioskop"].Value.ToString()),
+                            tmpFilm[0], pengguna, statusTiket);
+
+                        Tiket.KonfrimasiTiket(tmpTiket);
+                        MessageBox.Show("Tiket telah terkonfirmasi.");
+
+                        FormKonfirmTiket_Load(sender, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error");
+                    }
+                }
         }
-
-        //    if (e.ColumnIndex == dataGridViewArtis.Columns["gridButtonKontrak"].Index && e.RowIndex >= 0)
-        //    {
-        //        FormUpdateUser form = new FormUpdateUser();
-        //        form.Owner = this;
-        //        form.dataGrid = dataGridViewResults;
-        //        form.objUpdate = new Pengguna();
-        //        form.objUpdate.Nik = dataGridViewResults.CurrentRow.Cells["Nik"].Value.ToString();
-        //        form.objUpdate.NamaDepan = dataGridViewResults.CurrentRow.Cells["Nama_depan"].Value.ToString();
-        //        form.objUpdate.NamaKeluarga = dataGridViewResults.CurrentRow.Cells["Nama_keluarga"].Value.ToString();
-        //        form.objUpdate.Alamat = dataGridViewResults.CurrentRow.Cells["Alamat"].Value.ToString();
-        //        form.objUpdate.Email = dataGridViewResults.CurrentRow.Cells["Email"].Value.ToString();
-        //        form.objUpdate.NoTelepon = dataGridViewResults.CurrentRow.Cells["No_telepon"].Value.ToString();
-        //        //Password not included
-        //        //Pin not included
-        //        form.objUpdate.TanggalBuat = DateTime.Parse(dataGridViewResults.CurrentRow.Cells["Tgl_buat"].Value.ToString());
-        //        form.objUpdate.TanggalUbah = DateTime.Parse(dataGridViewResults.CurrentRow.Cells["Tgl_perubahan"].Value.ToString());
-        //        form.ShowDialog();
-        //    }
     }
 }
