@@ -31,7 +31,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         {
             this.dataGridViewArtis = new System.Windows.Forms.DataGridView();
             this.textBoxKriteria = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelNamaArtis = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArtis)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,21 +50,21 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // textBoxKriteria
             // 
             this.textBoxKriteria.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxKriteria.Location = new System.Drawing.Point(136, 26);
+            this.textBoxKriteria.Location = new System.Drawing.Point(174, 26);
             this.textBoxKriteria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxKriteria.Name = "textBoxKriteria";
-            this.textBoxKriteria.Size = new System.Drawing.Size(514, 30);
+            this.textBoxKriteria.Size = new System.Drawing.Size(476, 30);
             this.textBoxKriteria.TabIndex = 8;
             // 
-            // label1
+            // labelNamaArtis
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 29);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Kriteria";
+            this.labelNamaArtis.AutoSize = true;
+            this.labelNamaArtis.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNamaArtis.Location = new System.Drawing.Point(24, 26);
+            this.labelNamaArtis.Name = "labelNamaArtis";
+            this.labelNamaArtis.Size = new System.Drawing.Size(144, 29);
+            this.labelNamaArtis.TabIndex = 7;
+            this.labelNamaArtis.Text = "Nama Artis:";
             // 
             // FormCekArtis
             // 
@@ -73,7 +73,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.ClientSize = new System.Drawing.Size(684, 389);
             this.Controls.Add(this.dataGridViewArtis);
             this.Controls.Add(this.textBoxKriteria);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelNamaArtis);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormCekArtis";
             this.Text = "FormCekArtis";
@@ -88,6 +88,6 @@ namespace ProjekISA_01_SVF_ManajemenArtis
 
         private System.Windows.Forms.DataGridView dataGridViewArtis;
         private System.Windows.Forms.TextBox textBoxKriteria;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelNamaArtis;
     }
 }
