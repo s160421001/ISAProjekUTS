@@ -72,12 +72,6 @@
     <Compile Include="FormDaftarKontrak.Designer.cs">
       <DependentUpon>FormDaftarKontrak.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDetailJadwal-Kegiatan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDetailJadwal-Kegiatan.Designer.cs">
-      <DependentUpon>FormDetailJadwal-Kegiatan.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormDetailKontrak.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,12 +90,6 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTambahKegiatan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTambahKegiatan.Designer.cs">
-      <DependentUpon>FormTambahKegiatan.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormTambahKontrak.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,9 +107,6 @@
     <EmbeddedResource Include="FormDaftarKontrak.resx">
       <DependentUpon>FormDaftarKontrak.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDetailJadwal-Kegiatan.resx">
-      <DependentUpon>FormDetailJadwal-Kegiatan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormDetailKontrak.resx">
       <DependentUpon>FormDetailKontrak.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,9 +115,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTambahKegiatan.resx">
-      <DependentUpon>FormTambahKegiatan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahKontrak.resx">
       <DependentUpon>FormTambahKontrak.cs</DependentUpon>

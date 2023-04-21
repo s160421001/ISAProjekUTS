@@ -29,6 +29,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCekArtis));
             this.dataGridViewArtis = new System.Windows.Forms.DataGridView();
             this.textBoxKriteria = new System.Windows.Forms.TextBox();
             this.labelNamaArtis = new System.Windows.Forms.Label();
@@ -38,45 +39,46 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // dataGridViewArtis
             // 
             this.dataGridViewArtis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewArtis.Location = new System.Drawing.Point(29, 77);
+            this.dataGridViewArtis.Location = new System.Drawing.Point(33, 96);
             this.dataGridViewArtis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewArtis.Name = "dataGridViewArtis";
             this.dataGridViewArtis.RowHeadersWidth = 62;
             this.dataGridViewArtis.RowTemplate.Height = 28;
-            this.dataGridViewArtis.Size = new System.Drawing.Size(620, 286);
+            this.dataGridViewArtis.Size = new System.Drawing.Size(698, 358);
             this.dataGridViewArtis.TabIndex = 9;
             this.dataGridViewArtis.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewArtis_CellContentClick);
             // 
             // textBoxKriteria
             // 
             this.textBoxKriteria.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxKriteria.Location = new System.Drawing.Point(174, 26);
+            this.textBoxKriteria.Location = new System.Drawing.Point(196, 32);
             this.textBoxKriteria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxKriteria.Name = "textBoxKriteria";
-            this.textBoxKriteria.Size = new System.Drawing.Size(476, 30);
+            this.textBoxKriteria.Size = new System.Drawing.Size(535, 35);
             this.textBoxKriteria.TabIndex = 8;
             // 
             // labelNamaArtis
             // 
             this.labelNamaArtis.AutoSize = true;
             this.labelNamaArtis.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNamaArtis.Location = new System.Drawing.Point(24, 26);
+            this.labelNamaArtis.Location = new System.Drawing.Point(27, 32);
             this.labelNamaArtis.Name = "labelNamaArtis";
-            this.labelNamaArtis.Size = new System.Drawing.Size(144, 29);
+            this.labelNamaArtis.Size = new System.Drawing.Size(172, 33);
             this.labelNamaArtis.TabIndex = 7;
             this.labelNamaArtis.Text = "Nama Artis:";
             // 
             // FormCekArtis
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 389);
+            this.ClientSize = new System.Drawing.Size(770, 486);
             this.Controls.Add(this.dataGridViewArtis);
             this.Controls.Add(this.textBoxKriteria);
             this.Controls.Add(this.labelNamaArtis);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormCekArtis";
-            this.Text = "FormCekArtis";
+            this.Text = "Cek Artis";
             this.Load += new System.EventHandler(this.FormCekArtis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArtis)).EndInit();
             this.ResumeLayout(false);

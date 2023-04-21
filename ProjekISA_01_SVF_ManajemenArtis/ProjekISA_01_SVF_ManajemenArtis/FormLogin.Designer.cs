@@ -29,6 +29,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
@@ -40,9 +41,9 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 90);
+            this.label2.Location = new System.Drawing.Point(18, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 34);
+            this.label2.Size = new System.Drawing.Size(193, 42);
             this.label2.TabIndex = 4;
             this.label2.Text = "Password";
             // 
@@ -50,37 +51,37 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 40);
+            this.label1.Location = new System.Drawing.Point(18, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 34);
+            this.label1.Size = new System.Drawing.Size(198, 42);
             this.label1.TabIndex = 3;
             this.label1.Text = "Username";
             // 
             // textBoxUsername
             // 
             this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsername.Location = new System.Drawing.Point(193, 31);
+            this.textBoxUsername.Location = new System.Drawing.Point(217, 39);
             this.textBoxUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(300, 43);
+            this.textBoxUsername.Size = new System.Drawing.Size(337, 50);
             this.textBoxUsername.TabIndex = 6;
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.Location = new System.Drawing.Point(193, 83);
+            this.textBoxPassword.Location = new System.Drawing.Point(217, 104);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(300, 43);
+            this.textBoxPassword.Size = new System.Drawing.Size(337, 50);
             this.textBoxPassword.TabIndex = 7;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(354, 165);
+            this.button1.Location = new System.Drawing.Point(398, 206);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 45);
+            this.button1.Size = new System.Drawing.Size(156, 56);
             this.button1.TabIndex = 8;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
@@ -88,14 +89,15 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 234);
+            this.ClientSize = new System.Drawing.Size(597, 292);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormLogin";
             this.Text = "Login";

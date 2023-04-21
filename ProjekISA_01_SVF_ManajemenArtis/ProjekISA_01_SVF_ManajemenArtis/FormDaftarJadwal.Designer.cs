@@ -29,6 +29,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDaftarJadwal));
             this.dataGridViewJadwal = new System.Windows.Forms.DataGridView();
             this.textBoxKriteria = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -163,8 +164,9 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.Controls.Add(this.dataGridViewJadwal);
             this.Controls.Add(this.textBoxKriteria);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDaftarJadwal";
-            this.Text = "FormDaftarJadwal";
+            this.Text = "Jadwal";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJadwal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
