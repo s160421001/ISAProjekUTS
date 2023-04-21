@@ -129,6 +129,16 @@ namespace ManajemenArtis_Lib
             }
             return tmpList;
         }
+
+        public static void KontrakArtis(Artis artis, int idManajer)
+        {
+            string sql = "UPDATE artis" +
+                " SET status_manajer = 'aktif'," +
+                " manajer_id = " + idManajer + " " +
+                " WHERE id = " + artis.Id + ";";
+
+            Koneksi.JalankanPerintahDML(sql);
+        }
         #endregion
     }
 }
