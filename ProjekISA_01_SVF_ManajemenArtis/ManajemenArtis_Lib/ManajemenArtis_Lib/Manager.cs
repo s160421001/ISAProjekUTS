@@ -145,9 +145,9 @@ namespace ManajemenArtis_Lib
 
         public static void TambahData(Manager m)
         {
-            string sql = "insert into manajer(id, nama, tanggal_lahir, tanggal_masuk, username, password, jabatan) " +
+            string sql = "insert into manajer(nama, tanggal_lahir, tanggal_masuk, username, password, jabatan) " +
                 "values ('" +
-                m.Id + "','" +
+                m.Nama + "','" +
                 m.TglLahir.ToString("yyyy-MM-dd") + "','" +
                 m.TglMasuk.ToString("yyyy-MM-dd") + "','" +
                 m.Username + "','" +

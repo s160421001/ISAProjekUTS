@@ -69,5 +69,11 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 MessageBox.Show(ex.Message, "Error");
             }
         }
+
+        private void buttonSignUp_Click(object sender, EventArgs e)
+        {
+            FormSignUp formSignUp = new FormSignUp();
+            formSignUp.ShowDialog();
+        }
     }
 }

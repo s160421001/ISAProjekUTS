@@ -41,3 +41,4 @@ C:\Users\User\Documents\GitHub\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\Proj
 C:\Users\User\Documents\GitHub\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ProjekISA_01_SVF_ManajemenArtis\obj\Debug\ProjekISA_01_SVF_ManajemenArtis.exe
 C:\Users\User\Documents\GitHub\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ProjekISA_01_SVF_ManajemenArtis\obj\Debug\ProjekISA_01_SVF_ManajemenArtis.pdb
 C:\Users\Steven Christopher\Desktop\UBAYA\Semester 4\Information Security and Assurance\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ProjekISA_01_SVF_ManajemenArtis\obj\Debug\ProjekISA_01_SVF_ManajemenArtis.FormCekManajer.resources
+C:\Users\Steven Christopher\Desktop\UBAYA\Semester 4\Information Security and Assurance\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ProjekISA_01_SVF_ManajemenArtis\obj\Debug\ProjekISA_01_SVF_ManajemenArtis.FormSignUp.resources

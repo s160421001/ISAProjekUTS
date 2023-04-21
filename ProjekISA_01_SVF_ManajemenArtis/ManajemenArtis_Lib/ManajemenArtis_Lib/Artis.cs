@@ -35,7 +35,8 @@ namespace ManajemenArtis_Lib
             this.Tanggal_masuk = DateTime.Now;
             this.Username = "";
             this.Password = "";
-            this.Manager = manager;
+            this.Status = status_manajer.kosong;
+            this.Manager = null;
         }
 
         public Artis(int id, string nama, DateTime tanggal_lahir, DateTime tanggal_masuk, string username, string password, status_manajer status, Manager manager)
@@ -140,15 +141,14 @@ namespace ManajemenArtis_Lib
 
         public static void TambahData(Artis a)
         {
-            string sql = "insert into artis(id, nama, tanggal_lahir, tanggal_masuk, username, password, status_manajer, manajer_id) " +
+            string sql = "insert into artis(nama, tanggal_lahir, tanggal_masuk, username, password, status_manajer, manajer_id) " +
                 "values ('" +
-                a.Id + "','" +
+                a.Nama + "','" +
                 a.Tanggal_lahir.ToString("yyyy-MM-dd") + "','" +
                 a.Tanggal_masuk.ToString("yyyy-MM-dd") + "','" +
                 a.Username + "','" +
                 a.Password + "','" +
-                a.Status + "','" +
-                a.Manager.Id + "')";
+                a.Status + "','0')";
 
             Koneksi.JalankanPerintahDML(sql);
         }

@@ -29,12 +29,12 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxLokasi = new System.Windows.Forms.TextBox();
-            this.dateTimePickerAcara = new System.Windows.Forms.DateTimePicker();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.dateTimePickerTanggalLahir = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxPengaju = new System.Windows.Forms.TextBox();
-            this.textBoxJudul = new System.Windows.Forms.TextBox();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.textBoxNama = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,24 +43,24 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.comboBoxPosisi = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // textBoxLokasi
+            // textBoxPassword
             // 
-            this.textBoxLokasi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLokasi.Location = new System.Drawing.Point(235, 270);
-            this.textBoxLokasi.Name = "textBoxLokasi";
-            this.textBoxLokasi.Size = new System.Drawing.Size(388, 30);
-            this.textBoxLokasi.TabIndex = 42;
+            this.textBoxPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPassword.Location = new System.Drawing.Point(235, 270);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(388, 30);
+            this.textBoxPassword.TabIndex = 42;
             // 
-            // dateTimePickerAcara
+            // dateTimePickerTanggalLahir
             // 
-            this.dateTimePickerAcara.CalendarFont = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerAcara.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerAcara.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerAcara.Location = new System.Drawing.Point(235, 171);
-            this.dateTimePickerAcara.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePickerAcara.Name = "dateTimePickerAcara";
-            this.dateTimePickerAcara.Size = new System.Drawing.Size(217, 34);
-            this.dateTimePickerAcara.TabIndex = 41;
+            this.dateTimePickerTanggalLahir.CalendarFont = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerTanggalLahir.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerTanggalLahir.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerTanggalLahir.Location = new System.Drawing.Point(235, 171);
+            this.dateTimePickerTanggalLahir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePickerTanggalLahir.Name = "dateTimePickerTanggalLahir";
+            this.dateTimePickerTanggalLahir.Size = new System.Drawing.Size(217, 34);
+            this.dateTimePickerTanggalLahir.TabIndex = 41;
             // 
             // label6
             // 
@@ -82,21 +82,21 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.label5.TabIndex = 39;
             this.label5.Text = "Username";
             // 
-            // textBoxPengaju
+            // textBoxUsername
             // 
-            this.textBoxPengaju.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPengaju.Location = new System.Drawing.Point(235, 221);
-            this.textBoxPengaju.Name = "textBoxPengaju";
-            this.textBoxPengaju.Size = new System.Drawing.Size(388, 30);
-            this.textBoxPengaju.TabIndex = 38;
+            this.textBoxUsername.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.Location = new System.Drawing.Point(235, 221);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(388, 30);
+            this.textBoxUsername.TabIndex = 38;
             // 
-            // textBoxJudul
+            // textBoxNama
             // 
-            this.textBoxJudul.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxJudul.Location = new System.Drawing.Point(235, 129);
-            this.textBoxJudul.Name = "textBoxJudul";
-            this.textBoxJudul.Size = new System.Drawing.Size(388, 30);
-            this.textBoxJudul.TabIndex = 37;
+            this.textBoxNama.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNama.Location = new System.Drawing.Point(235, 129);
+            this.textBoxNama.Name = "textBoxNama";
+            this.textBoxNama.Size = new System.Drawing.Size(388, 30);
+            this.textBoxNama.TabIndex = 37;
             // 
             // label2
             // 
@@ -147,6 +147,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.buttonTambah.TabIndex = 45;
             this.buttonTambah.Text = "Daftar";
             this.buttonTambah.UseVisualStyleBackColor = true;
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // comboBoxPosisi
             // 
@@ -170,12 +171,12 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxLokasi);
-            this.Controls.Add(this.dateTimePickerAcara);
+            this.Controls.Add(this.textBoxPassword);
+            this.Controls.Add(this.dateTimePickerTanggalLahir);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxPengaju);
-            this.Controls.Add(this.textBoxJudul);
+            this.Controls.Add(this.textBoxUsername);
+            this.Controls.Add(this.textBoxNama);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -188,12 +189,12 @@ namespace ProjekISA_01_SVF_ManajemenArtis
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBoxLokasi;
-        private System.Windows.Forms.DateTimePicker dateTimePickerAcara;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.DateTimePicker dateTimePickerTanggalLahir;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxPengaju;
-        private System.Windows.Forms.TextBox textBoxJudul;
+        private System.Windows.Forms.TextBox textBoxUsername;
+        private System.Windows.Forms.TextBox textBoxNama;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
