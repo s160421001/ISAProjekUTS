@@ -142,6 +142,20 @@ namespace ManajemenArtis_Lib
             }
             return tmpList;
         }
+
+        public static void TambahData(Manager m)
+        {
+            string sql = "insert into manajer(id, nama, tanggal_lahir, tanggal_masuk, username, password, jabatan) " +
+                "values ('" +
+                m.Id + "','" +
+                m.TglLahir.ToString("yyyy-MM-dd") + "','" +
+                m.TglMasuk.ToString("yyyy-MM-dd") + "','" +
+                m.Username + "','" +
+                m.Password + "','" +
+                jabatan.biasa + "')";
+
+            Koneksi.JalankanPerintahDML(sql);
+        }
         #endregion
     }
 }

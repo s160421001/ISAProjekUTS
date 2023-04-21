@@ -137,6 +137,21 @@ namespace ManajemenArtis_Lib
 
             Koneksi.JalankanPerintahDML(sql);
         }
+
+        public static void TambahData(Artis a)
+        {
+            string sql = "insert into artis(id, nama, tanggal_lahir, tanggal_masuk, username, password, status_manajer, manajer_id) " +
+                "values ('" +
+                a.Id + "','" +
+                a.Tanggal_lahir.ToString("yyyy-MM-dd") + "','" +
+                a.Tanggal_masuk.ToString("yyyy-MM-dd") + "','" +
+                a.Username + "','" +
+                a.Password + "','" +
+                a.Status + "','" +
+                a.Manager.Id + "')";
+
+            Koneksi.JalankanPerintahDML(sql);
+        }
         #endregion
     }
 }
