@@ -118,8 +118,6 @@ namespace ManajemenArtis_Lib
             }
             return tmpList;
         }
-
         #endregion
-
     }
 }

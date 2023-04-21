@@ -96,6 +96,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.jadwalToolStripMenuItem.Name = "jadwalToolStripMenuItem";
             this.jadwalToolStripMenuItem.Size = new System.Drawing.Size(86, 27);
             this.jadwalToolStripMenuItem.Text = "Jadwal";
+            this.jadwalToolStripMenuItem.Visible = false;
             // 
             // cekJadwalToolStripMenuItem
             // 
@@ -118,6 +119,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.kontrakToolStripMenuItem.Name = "kontrakToolStripMenuItem";
             this.kontrakToolStripMenuItem.Size = new System.Drawing.Size(92, 27);
             this.kontrakToolStripMenuItem.Text = "Kontrak";
+            this.kontrakToolStripMenuItem.Visible = false;
             // 
             // cekKontrakToolStripMenuItem
             // 
@@ -131,6 +133,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.tambahKontrakToolStripMenuItem.Name = "tambahKontrakToolStripMenuItem";
             this.tambahKontrakToolStripMenuItem.Size = new System.Drawing.Size(237, 28);
             this.tambahKontrakToolStripMenuItem.Text = "Tambah Kontrak";
+            this.tambahKontrakToolStripMenuItem.Visible = false;
             // 
             // manajemenToolStripMenuItem
             // 
@@ -141,18 +144,21 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.manajemenToolStripMenuItem.Name = "manajemenToolStripMenuItem";
             this.manajemenToolStripMenuItem.Size = new System.Drawing.Size(125, 27);
             this.manajemenToolStripMenuItem.Text = "Manajemen";
+            this.manajemenToolStripMenuItem.Visible = false;
             // 
             // pesanMasukToolStripMenuItem
             // 
             this.pesanMasukToolStripMenuItem.Name = "pesanMasukToolStripMenuItem";
-            this.pesanMasukToolStripMenuItem.Size = new System.Drawing.Size(213, 28);
+            this.pesanMasukToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.pesanMasukToolStripMenuItem.Text = "Pesan Masuk";
+            this.pesanMasukToolStripMenuItem.Visible = false;
             // 
             // cekArtisToolStripMenuItem
             // 
             this.cekArtisToolStripMenuItem.Name = "cekArtisToolStripMenuItem";
-            this.cekArtisToolStripMenuItem.Size = new System.Drawing.Size(213, 28);
+            this.cekArtisToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.cekArtisToolStripMenuItem.Text = "Cek Artis";
+            this.cekArtisToolStripMenuItem.Visible = false;
             this.cekArtisToolStripMenuItem.Click += new System.EventHandler(this.cekArtisToolStripMenuItem_Click);
             // 
             // FormMenu

@@ -35,7 +35,8 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             {
                 labelNama.Text = manager.Nama;
             }
-            
+            CekAccessControl();
+
         }
 
         private void CekAccessControl()
@@ -45,17 +46,50 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 if (manager.Title == jabatan.biasa)
                 {
                     homeToolStripMenuItem.Visible = true;
-                    
+
+                    List<Artis> listArtis = new List<Artis>();
+                    listArtis = Artis.BacaData("", "");
+
+                    foreach(Artis a in listArtis)
+                    {
+                        if(a.Manager.Id == manager.Id)
+                        {
+                            kontrakToolStripMenuItem.Visible = true;
+                            tambahKontrakToolStripMenuItem.Visible = true;
+                            jadwalToolStripMenuItem.Visible = true;
+                            manajemenToolStripMenuItem.Visible = true;
+                            cekArtisToolStripMenuItem.Visible = true;
+                            pesanMasukToolStripMenuItem.Visible = true;
+                            break;
+                        }
+                        else
+                        {
+                            manajemenToolStripMenuItem.Visible = true;
+                            cekArtisToolStripMenuItem.Visible = true;
+                        }
+                    }
                 }
                 else if (manager.Title == jabatan.superAdmin)
                 {
                     homeToolStripMenuItem.Visible = true;
+                    kontrakToolStripMenuItem.Visible = true;
+                    tambahKontrakToolStripMenuItem.Visible = true;
+                    jadwalToolStripMenuItem.Visible = true;
+                    manajemenToolStripMenuItem.Visible = true;
+                    cekArtisToolStripMenuItem.Visible = true;
+                    pesanMasukToolStripMenuItem.Visible = true;
                 }
             }
             else
             {
                 //kalau login sebagai artis
                 homeToolStripMenuItem.Visible = true;
+                if(artis.Manager.Id != 0)
+                {
+                    kontrakToolStripMenuItem.Visible = true;
+                    manajemenToolStripMenuItem.Visible = true;
+                    pesanMasukToolStripMenuItem.Visible = true;
+                }
             }
         }
 
