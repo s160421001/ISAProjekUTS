@@ -9,7 +9,7 @@ namespace ManajemenArtis_Lib
 {
     public enum jabatan
     {
-        manager,
+        biasa,
         superAdmin
     }
 
@@ -58,6 +58,11 @@ namespace ManajemenArtis_Lib
         #endregion
 
         #region methods
+        public override string ToString()
+        {
+            return Nama;
+        }
+
         public static Manager CekLogin(string username, string password)
         {
             //Password tidak diambil karena tidak perlu menyimpan password pada obyek manajer untuk alasan keamanan
@@ -77,7 +82,7 @@ namespace ManajemenArtis_Lib
                     result.GetDateTime("tanggal_masuk"),
                     result.GetString("username"),
                     "",
-                    (result.GetString("jabatan") == "manager" ? jabatan.manager : jabatan.superAdmin));
+                    (result.GetString("jabatan") == "biasa" ? jabatan.biasa : jabatan.superAdmin));
             }
             return tmp;
         }
@@ -107,7 +112,7 @@ namespace ManajemenArtis_Lib
                     result.GetDateTime("tanggal_masuk"),
                     result.GetString("username"),
                     "",
-                    (result.GetString("jabatan") == "manager" ? jabatan.manager : jabatan.superAdmin));
+                    (result.GetString("jabatan") == "biasa" ? jabatan.biasa : jabatan.superAdmin));
 
                 tmpList.Add(tmp);
             }

@@ -42,7 +42,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         {
             if (manager != null)
             {
-                if (manager.Title == jabatan.manager)
+                if (manager.Title == jabatan.biasa)
                 {
                     homeToolStripMenuItem.Visible = true;
                     
@@ -66,14 +66,20 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             {
                 FormCekArtis formCekArtis = new FormCekArtis();
                 formCekArtis.MdiParent = this;
-                formCekArtis.Show();
                 formCekArtis.manager = manager;
+                formCekArtis.Show();
+                
             }
             else
             {
                 form.Show();
                 form.BringToFront();
             }
+        }
+
+        private void cekKontrakToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 } 

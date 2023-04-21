@@ -66,9 +66,10 @@ namespace ManajemenArtis_Lib
         public static Artis CekLogin(string username, string password)
         {
             //Password tidak diambil karena tidak perlu menyimpan password pada obyek artis untuk alasan keamanan
-            string sql = "SELECT id, nama, tanggal_lahir, tanggal_masuk, username, status_manajer " +
-                "FROM artis " +
-                "WHERE username='" + username + "' AND password='" + password + "';";
+            string sql = "SELECT a.id, a.nama, a.tanggal_lahir, a.tanggal_masuk, a.username, a.status_manajer, a.manajer_id " +
+                "FROM artis as a " +
+                "INNER JOIN manajer as m ON a.manajer_id=m.id " +
+                "WHERE a.username='" + username + "' AND a.password='" + password + "';";
 
             MySqlDataReader result = Koneksi.JalankanQuery(sql);
 
@@ -77,6 +78,8 @@ namespace ManajemenArtis_Lib
             {
                 status_manajer tmpStatus = status_manajer.kosong;
 
+                List<Manager> tmpManajer = Manager.BacaData("id", result.GetInt32("manajer_id").ToString());
+
                 tmp = new Artis(
                     result.GetInt32("id"),
                     result.GetString("nama"),
@@ -84,16 +87,17 @@ namespace ManajemenArtis_Lib
                     result.GetDateTime("tanggal_masuk"),
                     result.GetString("username"),
                     "",
-                    tmpStatus, null);
+                    tmpStatus, 
+                    tmpManajer[0]);
             }
             return tmp;
         }
 
         public static List<Artis> BacaData(string criteriaName, string criteriaValue)
         {
-            string sql = "SELECT a.id, a.nama, a.tanggal_lahir, a.tanggal_masuk, a.username, a.status_manajer " +
-                "FROM artis as a" +
-                "INNER JOIN manajer m ON m.id=a.manajer_id"; 
+            string sql = "SELECT a.id, a.nama, a.tanggal_lahir, a.tanggal_masuk, a.username, a.status_manajer, a.manajer_id " +
+                "FROM artis as a " +
+                "INNER JOIN manajer as m ON a.manajer_id=m.id" ;
             if (criteriaName == "")
             {
                 sql += ";";
@@ -107,23 +111,17 @@ namespace ManajemenArtis_Lib
 
             while (result.Read())
             {
-                Manager tmpManajer = new Manager(result.GetInt32("id"),
-                    result.GetString("nama"),
-                    result.GetDateTime("tanggal_lahir"),
-                    result.GetDateTime("tanggal_masuk"),
-                    result.GetString("username"),
-                    "",
-                    (result.GetString("jabatan") == "manager" ? jabatan.manager : jabatan.superAdmin));
+                List<Manager> tmpManajer = Manager.BacaData("id", result.GetInt32("manajer_id").ToString());
 
                 Artis tmpData = new Artis(
-                    result.GetInt32("id"),
-                    result.GetString("nama"),
-                    result.GetDateTime("tanggal_lahir"),
-                    result.GetDateTime("tanggal_masuk"),
-                    result.GetString("username"),
-                    "",
-                    (result.GetString("status_manajer") == "kosong" ? status_manajer.kosong : status_manajer.aktif),
-                    tmpManajer);
+                result.GetInt32("id"),
+                result.GetString("nama"),
+                result.GetDateTime("tanggal_lahir"),
+                result.GetDateTime("tanggal_masuk"),
+                result.GetString("username"),
+                "",
+                (result.GetString("status_manajer") == "kosong" ? status_manajer.kosong : status_manajer.aktif),
+                tmpManajer[0]);
 
                 tmpList.Add(tmpData);
             }
