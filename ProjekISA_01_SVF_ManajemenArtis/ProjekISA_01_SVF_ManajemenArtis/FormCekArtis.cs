@@ -19,6 +19,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             InitializeComponent();
         }
         public List<Artis> listArtis = new List<Artis>();
+        public Manager manager;
 
         private void FormCekArtis_Load(object sender, EventArgs e)
         {
@@ -60,31 +61,29 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             {
                 if (MessageBox.Show("Apakah anda mau mengkontrak artis ini?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    try
-                    {
-                        List<Artis> tmpArtis = Film.BacaData("judul_film",
-                            dataGridViewTiket.CurrentRow.Cells["film"].Value.ToString());
+                    //try
+                    //{
+                    //    string statusManajer = "aktif";
 
-                        string statusManajer = "aktif";
+                    //    Artis tmpArtis = new Tiket(
+                    //        int.Parse(dataGridViewTiket.CurrentRow.Cells["id"].Value.ToString()),
+                    //        DateTime.Parse(dataGridViewTiket.CurrentRow.Cells["tgl_beli"].Value.ToString()),
+                    //        int.Parse(dataGridViewTiket.CurrentRow.Cells["slot_jadwal"].Value.ToString()),
+                    //        int.Parse(dataGridViewTiket.CurrentRow.Cells["no_kursi"].Value.ToString()),
+                    //        int.Parse(dataGridViewTiket.CurrentRow.Cells["ruang_bioskop"].Value.ToString()),
+                    //        tmpFilm[0], pengguna, statusTiket);
 
-                        Tiket tmpTiket = new Tiket(
-                            int.Parse(dataGridViewTiket.CurrentRow.Cells["id"].Value.ToString()),
-                            DateTime.Parse(dataGridViewTiket.CurrentRow.Cells["tgl_beli"].Value.ToString()),
-                            int.Parse(dataGridViewTiket.CurrentRow.Cells["slot_jadwal"].Value.ToString()),
-                            int.Parse(dataGridViewTiket.CurrentRow.Cells["no_kursi"].Value.ToString()),
-                            int.Parse(dataGridViewTiket.CurrentRow.Cells["ruang_bioskop"].Value.ToString()),
-                            tmpFilm[0], pengguna, statusTiket);
+                    //    Artis.KontrakArtis(tmpArtis, manager.Id);
+                    //    MessageBox.Show("Artis berhasil dikontrak");
 
-                        Tiket.KonfrimasiTiket(tmpTiket);
-                        MessageBox.Show("Tiket telah terkonfirmasi.");
-
-                        FormKonfirmTiket_Load(sender, e);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Error");
-                    }
+                    //    FormKonfirmTiket_Load(sender, e);
+                    //}
+                    //catch (Exception ex)
+                    //{
+                    //    MessageBox.Show(ex.Message, "Error");
+                    //}
                 }
+            }
         }
     }
 }

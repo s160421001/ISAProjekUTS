@@ -67,6 +67,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 FormCekArtis formCekArtis = new FormCekArtis();
                 formCekArtis.MdiParent = this;
                 formCekArtis.Show();
+                formCekArtis.manager = manager;
             }
             else
             {
