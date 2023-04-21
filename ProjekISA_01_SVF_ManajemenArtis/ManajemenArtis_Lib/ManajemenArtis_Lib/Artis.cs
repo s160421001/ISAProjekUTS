@@ -91,7 +91,9 @@ namespace ManajemenArtis_Lib
 
         public static List<Artis> BacaData(string criteriaName, string criteriaValue)
         {
-            string sql = "SELECT id, nama, tanggal_lahir, tanggal_masuk, username, status_manajer, manajer_id from artis"; 
+            string sql = "SELECT a.id, a.nama, a.tanggal_lahir, a.tanggal_masuk, a.username, a.status_manajer " +
+                "FROM artis as a" +
+                "INNER JOIN manajer m ON m.id=a.manajer_id"; 
             if (criteriaName == "")
             {
                 sql += ";";
@@ -105,13 +107,13 @@ namespace ManajemenArtis_Lib
 
             while (result.Read())
             {
-                //Manager tmpManajer = new Manager(result.GetInt32("id"),
-                //    result.GetString("nama"),
-                //    result.GetDateTime("tanggal_lahir"),
-                //    result.GetDateTime("tanggal_masuk"),
-                //    result.GetString("username"),
-                //    "",
-                //    (result.GetString("jabatan") == "manager" ? jabatan.manager : jabatan.superAdmin));
+                Manager tmpManajer = new Manager(result.GetInt32("id"),
+                    result.GetString("nama"),
+                    result.GetDateTime("tanggal_lahir"),
+                    result.GetDateTime("tanggal_masuk"),
+                    result.GetString("username"),
+                    "",
+                    (result.GetString("jabatan") == "manager" ? jabatan.manager : jabatan.superAdmin));
 
                 Artis tmpData = new Artis(
                     result.GetInt32("id"),
@@ -121,7 +123,7 @@ namespace ManajemenArtis_Lib
                     result.GetString("username"),
                     "",
                     (result.GetString("status_manajer") == "kosong" ? status_manajer.kosong : status_manajer.aktif),
-                    null);
+                    tmpManajer);
 
                 tmpList.Add(tmpData);
             }
