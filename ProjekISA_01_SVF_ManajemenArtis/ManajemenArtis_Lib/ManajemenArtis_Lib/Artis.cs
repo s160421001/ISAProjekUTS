@@ -64,6 +64,11 @@ namespace ManajemenArtis_Lib
         #endregion
 
         #region METHODS
+        public override string ToString()
+        {
+            return Nama;
+        }
+
         public static Artis CekLogin(string username, string password)
         {
             //Password tidak diambil karena tidak perlu menyimpan password pada obyek artis untuk alasan keamanan

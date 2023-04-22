@@ -14,8 +14,9 @@ namespace ProjekISA_01_SVF_ManajemenArtis
     public partial class FormTambahKontrak : Form
     {
         public Manager manager = new Manager();
-        private List<Kontrak_kerja> list = new List<Kontrak_kerja>();
-        private Artis artis = new Artis();
+        public Artis artis = new Artis();
+        private List<Artis> listArtis = new List<Artis>();
+
         public FormTambahKontrak()
         {
             InitializeComponent();
@@ -37,7 +38,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                     artis
                     );
 
-                if (MessageBox.Show("Apakah anda yakin membeli tiket?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Apakah anda yakin menambah kontrak?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     if (Kontrak_kerja.TambahKontrak(tmp))
                     {
@@ -54,8 +55,8 @@ namespace ProjekISA_01_SVF_ManajemenArtis
 
         private void FormTambahKontrak_Load(object sender, EventArgs e)
         {
-            list = Kontrak_kerja.BacaData("manajer_id", manager.Id.ToString());
-            comboBoxArtis.DataSource = list;
+            listArtis = Artis.BacaData("a.manajer_id", manager.Id.ToString());
+            comboBoxArtis.DataSource = listArtis;
             comboBoxArtis.DisplayMember = "nama"; 
             comboBoxArtis.SelectedIndex = -1;            
         }
