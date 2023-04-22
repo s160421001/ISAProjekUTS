@@ -11,11 +11,11 @@ using ManajemenArtis_Lib;
 
 namespace ProjekISA_01_SVF_ManajemenArtis
 {
-    public partial class FormDaftarKontrak : Form
+    public partial class FormDaftarKontrakBaru : Form
     {
         public Artis artis = new Artis();
         public Manager manager = new Manager();
-        public FormDaftarKontrak()
+        public FormDaftarKontrakBaru()
         {
             InitializeComponent();
         }
@@ -32,18 +32,15 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             {
                 list = Kontrak_kerja.BacaDataSpesifikArtis(artis.Id);
             }
-            else if(manager!=null)
+            else if (manager != null)
             {
-                if(manager.Title == jabatan.biasa)
+                if (manager.Title == jabatan.superAdmin)
                 {
-                    list = Kontrak_kerja.BacaDataSpesifikManajer(manager.Id);
-                }
-                else
-                {
-                    list = Kontrak_kerja.BacaData("","");
+                    list = Kontrak_kerja.BacaData("k.status_artis", "kosong");
+                    //list = Kontrak_kerja.BacaDataSpesifikManajer(manager.Id);
                 }
             }
-            
+
             if (list.Count > 0)
             {
                 dataGridViewKontrak.DataSource = list;

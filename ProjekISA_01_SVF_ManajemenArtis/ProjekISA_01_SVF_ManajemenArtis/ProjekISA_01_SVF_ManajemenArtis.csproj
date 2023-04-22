@@ -72,11 +72,23 @@
     <Compile Include="FormDaftarJadwal.Designer.cs">
       <DependentUpon>FormDaftarJadwal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDaftarKontrak.cs">
+    <Compile Include="FormDaftarKontrakBaru.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDaftarKontrak.Designer.cs">
-      <DependentUpon>FormDaftarKontrak.cs</DependentUpon>
+    <Compile Include="FormDaftarKontrakBaru.Designer.cs">
+      <DependentUpon>FormDaftarKontrakBaru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDaftarKontrakPending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarKontrakPending.Designer.cs">
+      <DependentUpon>FormDaftarKontrakPending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDaftarKontrakTertolak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarKontrakTertolak.Designer.cs">
+      <DependentUpon>FormDaftarKontrakTertolak.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDetailKontrak.cs">
       <SubType>Form</SubType>
@@ -119,8 +131,14 @@
     <EmbeddedResource Include="FormDaftarJadwal.resx">
       <DependentUpon>FormDaftarJadwal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDaftarKontrak.resx">
-      <DependentUpon>FormDaftarKontrak.cs</DependentUpon>
+    <EmbeddedResource Include="FormDaftarKontrakBaru.resx">
+      <DependentUpon>FormDaftarKontrakBaru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftarKontrakPending.resx">
+      <DependentUpon>FormDaftarKontrakPending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftarKontrakTertolak.resx">
+      <DependentUpon>FormDaftarKontrakTertolak.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetailKontrak.resx">
       <DependentUpon>FormDetailKontrak.cs</DependentUpon>

@@ -122,33 +122,6 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             }
         }
 
-        private void cekKontrakToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormDaftarKontrak"];
-            if (form == null)
-            {
-                if (manager != null)
-                {
-                    FormDaftarKontrak daftarTiket = new FormDaftarKontrak();
-                    daftarTiket.MdiParent = this;
-                    daftarTiket.manager = manager;
-                    daftarTiket.Show();
-                }
-                else if (artis != null)
-                {
-                    FormDaftarKontrak daftarTiket = new FormDaftarKontrak();
-                    daftarTiket.MdiParent = this;
-                    daftarTiket.artis = artis;
-                    daftarTiket.Show();
-                }
-            }                
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
         private void cekManajerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form form = Application.OpenForms["FormCekManajer"];
@@ -175,6 +148,87 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 frm.MdiParent = this;
                 frm.manager = manager;
                 frm.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+
+        private void cekKontrakBaruToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormDaftarKontrakBaru"];
+            if (form == null)
+            {
+                if (manager != null)
+                {
+                    FormDaftarKontrakBaru formDaftarKontrakBaru = new FormDaftarKontrakBaru();
+                    formDaftarKontrakBaru.MdiParent = this;
+                    formDaftarKontrakBaru.manager = manager;
+                    formDaftarKontrakBaru.Show();
+                }
+                else if (artis != null)
+                {
+                    FormDaftarKontrakBaru formDaftarKontrakBaru = new FormDaftarKontrakBaru();
+                    formDaftarKontrakBaru.MdiParent = this;
+                    formDaftarKontrakBaru.artis = artis;
+                    formDaftarKontrakBaru.Show();
+                }
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+
+        private void cekKontrakPendingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormDaftarKontrakPending"];
+            if (form == null)
+            {
+                if (manager != null)
+                {
+                    FormDaftarKontrakPending formDaftarKontrakPending = new FormDaftarKontrakPending();
+                    formDaftarKontrakPending.MdiParent = this;
+                    formDaftarKontrakPending.manager = manager;
+                    formDaftarKontrakPending.Show();
+                }
+                else if (artis != null)
+                {
+                    FormDaftarKontrakPending formDaftarKontrakPending = new FormDaftarKontrakPending();
+                    formDaftarKontrakPending.MdiParent = this;
+                    formDaftarKontrakPending.artis = artis;
+                    formDaftarKontrakPending.Show();
+                }
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+
+        private void cekKontrakTertolakToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormDaftarKontrakTertolak"];
+            if (form == null)
+            {
+                if (manager != null)
+                {
+                    FormDaftarKontrakTertolak formDaftarKontrakTertolak = new FormDaftarKontrakTertolak();
+                    formDaftarKontrakTertolak.MdiParent = this;
+                    formDaftarKontrakTertolak.manager = manager;
+                    formDaftarKontrakTertolak.Show();
+                }
+                else if (artis != null)
+                {
+                    FormDaftarKontrakTertolak formDaftarKontrakTertolak = new FormDaftarKontrakTertolak();
+                    formDaftarKontrakTertolak.MdiParent = this;
+                    formDaftarKontrakTertolak.artis = artis;
+                    formDaftarKontrakTertolak.Show();
+                }
             }
             else
             {
