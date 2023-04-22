@@ -26,6 +26,20 @@ namespace ManajemenArtis_Lib
         #endregion
 
         #region construct
+        public Kontrak_kerja()
+        {
+            this.Id = 0;
+            this.Judul = "";
+            this.Pengaju = "";
+            this.Lokasi = "";
+            this.Deskripsi = "";
+            this.TglBuat = DateTime.Now;
+            this.TglAcara = DateTime.Now;
+            this.Status = "";
+            this.Manager = manager;
+            this.Artis = artis;
+        }
+
         public Kontrak_kerja(int id, string judul, string pengaju, string lokasi, string deskripsi, DateTime tglBuat, DateTime tglAcara, string status, Manager manager, Artis artis)
         {
             this.Id = id;
@@ -98,7 +112,6 @@ namespace ManajemenArtis_Lib
                     result.GetString("status_artis"),
                     tmpManajer[0], tmpArtis[0]
                     );
-
                 tmpList.Add(tmp);
             }
 
@@ -122,13 +135,39 @@ namespace ManajemenArtis_Lib
                 List<Artis> tmpArtis = Artis.BacaData("a.id", result.GetInt32("artis_id").ToString());
                 List<Manager> tmpManajer = Manager.BacaData("id", result.GetInt32("manajer_id").ToString());
 
-                //Artis tmpArtis = new Artis();
-                //tmpArtis.Id = result.GetInt32("artis_id");
-                //tmpArtis.Nama = result.GetString("nama");
+                Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
+                    result.GetString("judul"),
+                    result.GetString("pengaju"),
+                    result.GetString("lokasi"),
+                    result.GetString("deskripsi"),
+                    result.GetDateTime("tanggal_buat"),
+                    result.GetDateTime("tanggal_acara"),
+                    result.GetString("status_artis"),
+                    tmpManajer[0], tmpArtis[0]
+                    );
+                tmpList.Add(tmp);
+            }
 
-                //Manager tmpMan = new Manager();
-                //tmpMan.Id = result.GetInt32("manajer_id");
-                //tmpMan.Nama = result.GetString("nama");
+            return tmpList;
+        }
+
+        public static List<Kontrak_kerja> BacaDataSpesifikKontrakTertolakManajer(int id)
+        {
+            string sql = "SELECT k.id, k.judul,k.pengaju,k.lokasi, k.deskripsi, k.tanggal_buat, k.tanggal_acara, k.status_artis, k.manajer_id, k.artis_id" +
+              " FROM kontrak_kerja k " +
+              " INNER JOIN artis a ON a.id=k.artis_id " +
+              " INNER JOIN manajer m ON m.id=k.manajer_id " +
+              " WHERE k.manajer_id=" + id +
+              " AND k.status_artis LIKE'%tolak%';";
+
+            MySqlDataReader result = Koneksi.JalankanQuery(sql);
+
+            List<Kontrak_kerja> tmpList = new List<Kontrak_kerja>();
+
+            while (result.Read())
+            {
+                List<Artis> tmpArtis = Artis.BacaData("a.id", result.GetInt32("artis_id").ToString());
+                List<Manager> tmpManajer = Manager.BacaData("id", result.GetInt32("manajer_id").ToString());
 
                 Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
                     result.GetString("judul"),
@@ -140,12 +179,12 @@ namespace ManajemenArtis_Lib
                     result.GetString("status_artis"),
                     tmpManajer[0], tmpArtis[0]
                     );
-
                 tmpList.Add(tmp);
             }
 
             return tmpList;
         }
+
         public static List<Kontrak_kerja> BacaDataSpesifikArtis(int id)
         {
             string sql = "SELECT k.id, k.judul,k.pengaju,k.lokasi, k.deskripsi, k.tanggal_buat, k.tanggal_acara, k.status_artis, k.manajer_id, k.artis_id" +
@@ -164,13 +203,39 @@ namespace ManajemenArtis_Lib
                 List<Artis> tmpArtis = Artis.BacaData("a.id", result.GetInt32("artis_id").ToString());
                 List<Manager> tmpManajer = Manager.BacaData("id", result.GetInt32("manajer_id").ToString());
 
-                //Artis tmpArtis = new Artis();
-                //tmpArtis.Id = result.GetInt32("artis_id");
-                //tmpArtis.Nama = result.GetString("nama");
+                Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
+                    result.GetString("judul"),
+                    result.GetString("pengaju"),
+                    result.GetString("lokasi"),
+                    result.GetString("deskripsi"),
+                    result.GetDateTime("tanggal_buat"),
+                    result.GetDateTime("tanggal_acara"),
+                    result.GetString("status_artis"),
+                    tmpManajer[0], tmpArtis[0]
+                    );
 
-                //Manager tmpMan = new Manager();
-                //tmpMan.Id = result.GetInt32("manajer_id");
-                //tmpMan.Nama = result.GetString("nama");
+                tmpList.Add(tmp);
+            }
+            return tmpList;
+        }
+
+        public static List<Kontrak_kerja> BacaDataSpesifikKontrakTertolakArtis(int id)
+        {
+            string sql = "SELECT k.id, k.judul,k.pengaju,k.lokasi, k.deskripsi, k.tanggal_buat, k.tanggal_acara, k.status_artis, k.manajer_id, k.artis_id" +
+               " FROM kontrak_kerja k " +
+               " INNER JOIN artis a ON a.id=k.artis_id " +
+               " INNER JOIN manajer m ON m.id=k.manajer_id " +
+               " WHERE k.artis_id=" + id +
+               " AND k.status_artis LIKE'%tolak%';";
+
+            MySqlDataReader result = Koneksi.JalankanQuery(sql);
+
+            List<Kontrak_kerja> tmpList = new List<Kontrak_kerja>();
+
+            while (result.Read())
+            {
+                List<Artis> tmpArtis = Artis.BacaData("a.id", result.GetInt32("artis_id").ToString());
+                List<Manager> tmpManajer = Manager.BacaData("id", result.GetInt32("manajer_id").ToString());
 
                 Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
                     result.GetString("judul"),
@@ -185,7 +250,6 @@ namespace ManajemenArtis_Lib
 
                 tmpList.Add(tmp);
             }
-
             return tmpList;
         }
 
@@ -209,7 +273,13 @@ namespace ManajemenArtis_Lib
             }
             return false;
         }
+        public static int EditData(Kontrak_kerja k)
+        {
+            string sql = "Update kontrak_kerja set deskripsi='" + k.Deskripsi + "' where id='" + k.Id + "'";
 
+            int result = Koneksi.JalankanPerintahDML(sql);
+            return result;
+        }
 
         public static bool UpdateStatusKontrak(Kontrak_kerja kontrak, string status)
         {
@@ -247,7 +317,6 @@ namespace ManajemenArtis_Lib
             //kirim ke printer
             Print p = new Print(tipeFont, AlamatFile, 20, 10, 10, 10);
             p.SendToPrinter();
-
         }
         #endregion
     }

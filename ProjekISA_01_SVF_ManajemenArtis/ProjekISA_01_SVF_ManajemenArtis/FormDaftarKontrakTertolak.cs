@@ -22,7 +22,31 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         public Manager manager = new Manager();
         private void FormDaftarKontrakTertolak_Load(object sender, EventArgs e)
         {
+            List<Kontrak_kerja> list = new List<Kontrak_kerja>();
+            if (artis != null)
+            {
+                list = Kontrak_kerja.BacaDataSpesifikKontrakTertolakArtis(artis.Id);
+            }
+            else if (manager != null)
+            {
+                if (manager.Title == jabatan.biasa)
+                {
+                    list = Kontrak_kerja.BacaDataSpesifikKontrakTertolakManajer(manager.Id);
+                }
+                else
+                {
+                    list = Kontrak_kerja.BacaData("k.status_artis", "tolak");
+                }
+            }
 
+            if (list.Count > 0)
+            {
+                dataGridViewKontrak.DataSource = list;
+            }
+            else
+            {
+                dataGridViewKontrak.DataSource = null;
+            }
         }
     }
 }
