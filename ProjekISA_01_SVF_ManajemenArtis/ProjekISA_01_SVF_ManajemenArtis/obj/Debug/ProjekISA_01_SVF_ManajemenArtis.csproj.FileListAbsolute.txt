@@ -68,3 +68,4 @@ C:\Users\Felicia\Documents\GitHub\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\P
 C:\Users\Felicia\Documents\GitHub\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ProjekISA_01_SVF_ManajemenArtis\obj\Debug\ProjekISA_01_SVF_ManajemenArtis.csproj.CopyComplete
 C:\Users\Felicia\Documents\GitHub\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ProjekISA_01_SVF_ManajemenArtis\obj\Debug\ProjekISA_01_SVF_ManajemenArtis.exe
 C:\Users\Felicia\Documents\GitHub\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ProjekISA_01_SVF_ManajemenArtis\obj\Debug\ProjekISA_01_SVF_ManajemenArtis.pdb
+C:\Users\Steven Christopher\Desktop\UBAYA\Semester 4\Information Security and Assurance\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\ProjekISA_01_SVF_ManajemenArtis\obj\Debug\ProjekISA_01_SVF_ManajemenArtis.FormDetailKontrakEdit.resources

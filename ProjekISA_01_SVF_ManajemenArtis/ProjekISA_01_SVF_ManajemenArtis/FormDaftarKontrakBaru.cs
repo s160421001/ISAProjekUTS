@@ -93,7 +93,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             if (list.Count > 0)
             {
                 dataGridViewKontrak.DataSource = list;
-                if (dataGridViewKontrak.ColumnCount > 9)
+                if (dataGridViewKontrak.ColumnCount > 8)
                 {
                     CreateGridButtons();
                 }
