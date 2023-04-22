@@ -76,6 +76,7 @@ namespace ManajemenArtis_Lib
             MySqlCommand command = new MySqlCommand(sql, koneksi.koneksiDb);
             return command.ExecuteNonQuery();
         }
+        
         public static bool ExecuteDML(string sql)
         {
             Koneksi conn = new Koneksi();

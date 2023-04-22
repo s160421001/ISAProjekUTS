@@ -96,6 +96,12 @@
     <Compile Include="FormDetailKontrak.Designer.cs">
       <DependentUpon>FormDetailKontrak.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDetailKontrakEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetailKontrakEdit.Designer.cs">
+      <DependentUpon>FormDetailKontrakEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetailKontrak.resx">
       <DependentUpon>FormDetailKontrak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetailKontrakEdit.resx">
+      <DependentUpon>FormDetailKontrakEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
