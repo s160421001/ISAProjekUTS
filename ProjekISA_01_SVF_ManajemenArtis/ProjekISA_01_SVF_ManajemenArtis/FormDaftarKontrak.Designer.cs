@@ -40,45 +40,47 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 32);
+            this.label1.Location = new System.Drawing.Point(19, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 33);
+            this.label1.Size = new System.Drawing.Size(78, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "Kriteria";
             // 
             // textBoxKriteria
             // 
             this.textBoxKriteria.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxKriteria.Location = new System.Drawing.Point(155, 32);
-            this.textBoxKriteria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxKriteria.Location = new System.Drawing.Point(103, 21);
+            this.textBoxKriteria.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBoxKriteria.Name = "textBoxKriteria";
-            this.textBoxKriteria.Size = new System.Drawing.Size(578, 35);
+            this.textBoxKriteria.Size = new System.Drawing.Size(387, 26);
             this.textBoxKriteria.TabIndex = 5;
             // 
             // dataGridViewKontrak
             // 
             this.dataGridViewKontrak.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewKontrak.Location = new System.Drawing.Point(35, 96);
-            this.dataGridViewKontrak.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewKontrak.Location = new System.Drawing.Point(23, 62);
+            this.dataGridViewKontrak.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.dataGridViewKontrak.Name = "dataGridViewKontrak";
             this.dataGridViewKontrak.RowHeadersWidth = 62;
             this.dataGridViewKontrak.RowTemplate.Height = 28;
-            this.dataGridViewKontrak.Size = new System.Drawing.Size(698, 358);
+            this.dataGridViewKontrak.Size = new System.Drawing.Size(465, 233);
             this.dataGridViewKontrak.TabIndex = 6;
             this.dataGridViewKontrak.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKontrak_CellContentClick);
             // 
             // FormDaftarKontrak
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 485);
+            this.ClientSize = new System.Drawing.Size(517, 315);
             this.Controls.Add(this.dataGridViewKontrak);
             this.Controls.Add(this.textBoxKriteria);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "FormDaftarKontrak";
             this.Text = "Daftar Kontrak";
+            this.Load += new System.EventHandler(this.FormDaftarKontrak_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKontrak)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -151,7 +151,7 @@ namespace ManajemenArtis_Lib
                 a.Status + "','0')";
 
             Koneksi.JalankanPerintahDML(sql);
-        }
+        }       
         #endregion
     }
 }

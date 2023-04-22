@@ -49,9 +49,10 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(122, 100);
+            this.label1.Location = new System.Drawing.Point(81, 65);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 33);
+            this.label1.Size = new System.Drawing.Size(62, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Judul";
             // 
@@ -59,9 +60,10 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(87, 163);
+            this.label2.Location = new System.Drawing.Point(58, 106);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 33);
+            this.label2.Size = new System.Drawing.Size(86, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Pengaju";
             // 
@@ -69,19 +71,20 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(51, 344);
+            this.label3.Location = new System.Drawing.Point(34, 224);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 33);
+            this.label3.Size = new System.Drawing.Size(110, 22);
             this.label3.TabIndex = 2;
             this.label3.Text = "Isi Kontrak";
             // 
             // buttonTambah
             // 
             this.buttonTambah.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTambah.Location = new System.Drawing.Point(636, 890);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonTambah.Location = new System.Drawing.Point(424, 578);
+            this.buttonTambah.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(158, 48);
+            this.buttonTambah.Size = new System.Drawing.Size(105, 31);
             this.buttonTambah.TabIndex = 3;
             this.buttonTambah.Text = "Tambah";
             this.buttonTambah.UseVisualStyleBackColor = true;
@@ -90,38 +93,39 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // textBoxJudul
             // 
             this.textBoxJudul.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxJudul.Location = new System.Drawing.Point(231, 102);
-            this.textBoxJudul.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxJudul.Location = new System.Drawing.Point(154, 66);
+            this.textBoxJudul.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBoxJudul.Name = "textBoxJudul";
-            this.textBoxJudul.Size = new System.Drawing.Size(563, 35);
+            this.textBoxJudul.Size = new System.Drawing.Size(377, 26);
             this.textBoxJudul.TabIndex = 4;
             // 
             // textBoxPengaju
             // 
             this.textBoxPengaju.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPengaju.Location = new System.Drawing.Point(231, 165);
-            this.textBoxPengaju.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxPengaju.Location = new System.Drawing.Point(154, 107);
+            this.textBoxPengaju.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBoxPengaju.Name = "textBoxPengaju";
-            this.textBoxPengaju.Size = new System.Drawing.Size(563, 35);
+            this.textBoxPengaju.Size = new System.Drawing.Size(377, 26);
             this.textBoxPengaju.TabIndex = 5;
             // 
             // textBoxIsi
             // 
             this.textBoxIsi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIsi.Location = new System.Drawing.Point(231, 344);
-            this.textBoxIsi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxIsi.Location = new System.Drawing.Point(154, 224);
+            this.textBoxIsi.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBoxIsi.Multiline = true;
             this.textBoxIsi.Name = "textBoxIsi";
-            this.textBoxIsi.Size = new System.Drawing.Size(563, 508);
+            this.textBoxIsi.Size = new System.Drawing.Size(377, 332);
             this.textBoxIsi.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(134, 42);
+            this.label4.Location = new System.Drawing.Point(89, 27);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 33);
+            this.label4.Size = new System.Drawing.Size(53, 22);
             this.label4.TabIndex = 7;
             this.label4.Text = "Artis";
             // 
@@ -130,29 +134,32 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.comboBoxArtis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxArtis.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxArtis.FormattingEnabled = true;
-            this.comboBoxArtis.Location = new System.Drawing.Point(231, 42);
-            this.comboBoxArtis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxArtis.Location = new System.Drawing.Point(154, 27);
+            this.comboBoxArtis.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBoxArtis.Name = "comboBoxArtis";
-            this.comboBoxArtis.Size = new System.Drawing.Size(563, 35);
+            this.comboBoxArtis.Size = new System.Drawing.Size(377, 26);
             this.comboBoxArtis.TabIndex = 8;
+            this.comboBoxArtis.SelectedIndexChanged += new System.EventHandler(this.comboBoxArtis_SelectedIndexChanged);
             // 
             // dateTimePickerAcara
             // 
             this.dateTimePickerAcara.CalendarFont = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerAcara.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerAcara.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerAcara.Location = new System.Drawing.Point(231, 225);
+            this.dateTimePickerAcara.Location = new System.Drawing.Point(154, 146);
+            this.dateTimePickerAcara.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePickerAcara.Name = "dateTimePickerAcara";
-            this.dateTimePickerAcara.Size = new System.Drawing.Size(244, 40);
+            this.dateTimePickerAcara.Size = new System.Drawing.Size(164, 29);
             this.dateTimePickerAcara.TabIndex = 33;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(107, 286);
+            this.label6.Location = new System.Drawing.Point(71, 186);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 33);
+            this.label6.Size = new System.Drawing.Size(72, 22);
             this.label6.TabIndex = 31;
             this.label6.Text = "Lokasi";
             // 
@@ -160,26 +167,27 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 225);
+            this.label5.Location = new System.Drawing.Point(8, 146);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(207, 33);
+            this.label5.Size = new System.Drawing.Size(143, 22);
             this.label5.TabIndex = 30;
             this.label5.Text = "Tanggal Acara";
             // 
             // textBoxLokasi
             // 
             this.textBoxLokasi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLokasi.Location = new System.Drawing.Point(231, 284);
-            this.textBoxLokasi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxLokasi.Location = new System.Drawing.Point(154, 185);
+            this.textBoxLokasi.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBoxLokasi.Name = "textBoxLokasi";
-            this.textBoxLokasi.Size = new System.Drawing.Size(563, 35);
+            this.textBoxLokasi.Size = new System.Drawing.Size(377, 26);
             this.textBoxLokasi.TabIndex = 34;
             // 
             // FormTambahKontrak
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 978);
+            this.ClientSize = new System.Drawing.Size(572, 636);
             this.Controls.Add(this.textBoxLokasi);
             this.Controls.Add(this.dateTimePickerAcara);
             this.Controls.Add(this.label6);
@@ -194,7 +202,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "FormTambahKontrak";
             this.Text = "Tambah Kontrak";
             this.Load += new System.EventHandler(this.FormTambahKontrak_Load);

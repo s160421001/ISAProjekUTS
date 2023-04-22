@@ -124,7 +124,29 @@ namespace ProjekISA_01_SVF_ManajemenArtis
 
         private void cekKontrakToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form form = Application.OpenForms["FormDaftarKontrak"];
+            if (form == null)
+            {
+                if (manager != null)
+                {
+                    FormDaftarKontrak daftarTiket = new FormDaftarKontrak();
+                    daftarTiket.MdiParent = this;
+                    daftarTiket.manager = manager;
+                    daftarTiket.Show();
+                }
+                else if (artis != null)
+                {
+                    FormDaftarKontrak daftarTiket = new FormDaftarKontrak();
+                    daftarTiket.MdiParent = this;
+                    daftarTiket.artis = artis;
+                    daftarTiket.Show();
+                }
+            }                
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
         }
 
         private void cekManajerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -136,6 +158,23 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 formCekManajer.MdiParent = this;
                 formCekManajer.manager = manager;
                 formCekManajer.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+
+        private void tambahKontrakToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormDaftarKontrak"];
+            if (form == null)
+            {
+                FormTambahKontrak frm = new FormTambahKontrak();
+                frm.MdiParent = this;
+                frm.manager = manager;
+                frm.Show();
             }
             else
             {
