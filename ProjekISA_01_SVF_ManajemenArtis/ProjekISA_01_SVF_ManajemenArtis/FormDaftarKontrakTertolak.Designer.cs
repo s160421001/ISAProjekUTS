@@ -57,12 +57,13 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.dataGridViewKontrak.RowTemplate.Height = 28;
             this.dataGridViewKontrak.Size = new System.Drawing.Size(620, 287);
             this.dataGridViewKontrak.TabIndex = 65;
+            this.dataGridViewKontrak.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKontrak_CellContentClick);
             // 
             // FormDaftarKontrakTertolak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 377);
+            this.ClientSize = new System.Drawing.Size(666, 377);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridViewKontrak);
             this.Name = "FormDaftarKontrakTertolak";

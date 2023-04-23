@@ -13,8 +13,8 @@ namespace ProjekISA_01_SVF_ManajemenArtis
 {
     public partial class FormDaftarKontrakBaru : Form
     {
-        public Artis artis = new Artis();
-        public Manager manager = new Manager();
+        public Artis artis;
+        public Manager manager;
         public FormDaftarKontrakBaru()
         {
             InitializeComponent();
@@ -73,6 +73,62 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                     MessageBox.Show(ex.Message, "Error");
                 }
             }
+
+            if (e.ColumnIndex == dataGridViewKontrak.Columns["gridButtonTerima"].Index && e.RowIndex >= 0)
+            {
+                if (MessageBox.Show("Apakah anda mau menerima kontrak ini?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Kontrak_kerja tmpKontrak = new Kontrak_kerja(
+                            int.Parse(dataGridViewKontrak.CurrentRow.Cells["id"].Value.ToString()),
+                            dataGridViewKontrak.CurrentRow.Cells["judul"].Value.ToString(),
+                            dataGridViewKontrak.CurrentRow.Cells["pengaju"].Value.ToString(),
+                            dataGridViewKontrak.CurrentRow.Cells["lokasi"].Value.ToString(),
+                            dataGridViewKontrak.CurrentRow.Cells["deskripsi"].Value.ToString(),
+                            DateTime.Parse(dataGridViewKontrak.CurrentRow.Cells["tglbuat"].Value.ToString()),
+                            DateTime.Parse(dataGridViewKontrak.CurrentRow.Cells["tglacara"].Value.ToString()),
+                            dataGridViewKontrak.CurrentRow.Cells["status"].Value.ToString(),
+                            artis.Manager, artis);
+
+                        Kontrak_kerja.UpdateStatusKontrak(tmpKontrak, "proses");
+                        MessageBox.Show("Kontrak diterima");
+                        FormDaftarKontrak_Load(sender, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error");
+                    }
+                }
+            }
+
+            if (e.ColumnIndex == dataGridViewKontrak.Columns["gridButtonTolak"].Index && e.RowIndex >= 0)
+            {
+                if (MessageBox.Show("Apakah anda mau menolak kontrak ini?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Kontrak_kerja tmpKontrak = new Kontrak_kerja(
+                            int.Parse(dataGridViewKontrak.CurrentRow.Cells["id"].Value.ToString()),
+                            dataGridViewKontrak.CurrentRow.Cells["judul"].Value.ToString(),
+                            dataGridViewKontrak.CurrentRow.Cells["pengaju"].Value.ToString(),
+                            dataGridViewKontrak.CurrentRow.Cells["lokasi"].Value.ToString(),
+                            dataGridViewKontrak.CurrentRow.Cells["deskripsi"].Value.ToString(),
+                            DateTime.Parse(dataGridViewKontrak.CurrentRow.Cells["tglbuat"].Value.ToString()),
+                            DateTime.Parse(dataGridViewKontrak.CurrentRow.Cells["tglacara"].Value.ToString()),
+                            dataGridViewKontrak.CurrentRow.Cells["status"].Value.ToString(),
+                            artis.Manager, artis);
+
+                        Kontrak_kerja.UpdateStatusKontrak(tmpKontrak, "tolak");
+                        MessageBox.Show("Kontrak ditolak");
+                        FormDaftarKontrak_Load(sender, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error");
+                    }
+                }
+            }
         }
 
         public void FormDaftarKontrak_Load(object sender, EventArgs e)
@@ -84,6 +140,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             }
             else if (manager != null)
             {
+                artis = new Artis();
                 if (manager.Title == jabatan.superAdmin)
                 {
                     list = Kontrak_kerja.BacaData("k.status_artis", "kosong");

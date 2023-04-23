@@ -57,6 +57,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.dataGridViewKontrak.RowTemplate.Height = 28;
             this.dataGridViewKontrak.Size = new System.Drawing.Size(620, 287);
             this.dataGridViewKontrak.TabIndex = 65;
+            this.dataGridViewKontrak.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKontrak_CellContentClick);
             // 
             // FormDaftarKontrakPending
             // 

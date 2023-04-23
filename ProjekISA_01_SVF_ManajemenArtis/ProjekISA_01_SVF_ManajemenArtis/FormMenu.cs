@@ -58,6 +58,8 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                         if(a.Manager.Id == manager.Id)
                         {
                             kontrakToolStripMenuItem.Visible = true;
+                            cekKontrakPendingToolStripMenuItem.Visible = true;
+                            cekKontrakTertolakToolStripMenuItem.Visible = true;
                             tambahKontrakToolStripMenuItem.Visible = true;
                             jadwalToolStripMenuItem.Visible = true;
                             manajemenToolStripMenuItem.Visible = true;
@@ -76,6 +78,9 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 {
                     homeToolStripMenuItem.Visible = true;
                     kontrakToolStripMenuItem.Visible = true;
+                    cekKontrakBaruToolStripMenuItem.Visible = true;
+                    cekKontrakPendingToolStripMenuItem.Visible = true;
+                    cekKontrakTertolakToolStripMenuItem.Visible = true;
                     tambahKontrakToolStripMenuItem.Visible = true;
                     jadwalToolStripMenuItem.Visible = true;
                     manajemenToolStripMenuItem.Visible = true;
@@ -91,6 +96,8 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 if(artis.Manager.Id != 0)
                 {
                     kontrakToolStripMenuItem.Visible = true;
+                    cekKontrakBaruToolStripMenuItem.Visible = true;
+                    cekKontrakTertolakToolStripMenuItem.Visible = true;
                     jadwalToolStripMenuItem.Visible = true;
                     manajemenToolStripMenuItem.Visible = true;
                     pesanMasukToolStripMenuItem.Visible = true;
@@ -195,13 +202,6 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                     formDaftarKontrakPending.manager = manager;
                     formDaftarKontrakPending.Show();
                 }
-                else if (artis != null)
-                {
-                    FormDaftarKontrakPending formDaftarKontrakPending = new FormDaftarKontrakPending();
-                    formDaftarKontrakPending.MdiParent = this;
-                    formDaftarKontrakPending.artis = artis;
-                    formDaftarKontrakPending.Show();
-                }
             }
             else
             {
@@ -228,6 +228,46 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                     formDaftarKontrakTertolak.MdiParent = this;
                     formDaftarKontrakTertolak.artis = artis;
                     formDaftarKontrakTertolak.Show();
+                }
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+
+        private void cekJadwalArtisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormDaftarJadwalArtis"];
+            if (form == null)
+            {
+                if (manager != null)
+                {
+                    FormDaftarJadwalArtis formDaftarJadwalArtis = new FormDaftarJadwalArtis();
+                    formDaftarJadwalArtis.MdiParent = this;
+                    //formDaftarJadwalArtis.artis = artis;
+                    formDaftarJadwalArtis.Show();
+                }
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+
+        private void cekJadwalManagerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormDaftarJadwalArtisYangDiManage"];
+            if (form == null)
+            {
+                if (manager != null)
+                {
+                    FormDaftarJadwalArtisYangDiManage formDaftarJadwal = new FormDaftarJadwalArtisYangDiManage();
+                    formDaftarJadwal.MdiParent = this;
+                    //formDaftarJadwal.manager = manager;
+                    formDaftarJadwal.Show();
                 }
             }
             else
