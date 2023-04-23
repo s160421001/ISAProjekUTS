@@ -133,7 +133,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.comboBoxArtis.Location = new System.Drawing.Point(143, 76);
             this.comboBoxArtis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxArtis.Name = "comboBoxArtis";
-            this.comboBoxArtis.Size = new System.Drawing.Size(501, 34);
+            this.comboBoxArtis.Size = new System.Drawing.Size(438, 34);
             this.comboBoxArtis.TabIndex = 18;
             // 
             // label1
@@ -149,7 +149,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.label1.Text = "JADWAL ARTIS YANG DI MANAGE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FormDaftarJadwal
+            // FormDaftarJadwalArtisYangDiManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -165,7 +165,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.Controls.Add(this.dataGridViewJadwal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FormDaftarJadwal";
+            this.Name = "FormDaftarJadwalArtisYangDiManage";
             this.Text = "Jadwal";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJadwal)).EndInit();
             this.ResumeLayout(false);

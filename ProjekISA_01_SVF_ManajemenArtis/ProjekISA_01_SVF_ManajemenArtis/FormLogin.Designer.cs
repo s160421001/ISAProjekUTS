@@ -36,13 +36,16 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonSignUp = new System.Windows.Forms.Button();
+            this.textBoxCaptcha = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelCaptcha = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 90);
+            this.label2.Location = new System.Drawing.Point(23, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(159, 34);
             this.label2.TabIndex = 4;
@@ -79,7 +82,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(22, 165);
+            this.button1.Location = new System.Drawing.Point(22, 264);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(139, 45);
@@ -91,7 +94,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // buttonSignUp
             // 
             this.buttonSignUp.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSignUp.Location = new System.Drawing.Point(320, 165);
+            this.buttonSignUp.Location = new System.Drawing.Point(320, 264);
             this.buttonSignUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSignUp.Name = "buttonSignUp";
             this.buttonSignUp.Size = new System.Drawing.Size(173, 45);
@@ -100,11 +103,44 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.buttonSignUp.UseVisualStyleBackColor = true;
             this.buttonSignUp.Click += new System.EventHandler(this.buttonSignUp_Click);
             // 
+            // textBoxCaptcha
+            // 
+            this.textBoxCaptcha.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCaptcha.Location = new System.Drawing.Point(193, 199);
+            this.textBoxCaptcha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCaptcha.Name = "textBoxCaptcha";
+            this.textBoxCaptcha.Size = new System.Drawing.Size(300, 43);
+            this.textBoxCaptcha.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(43, 204);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(139, 34);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Captcha";
+            // 
+            // labelCaptcha
+            // 
+            this.labelCaptcha.AutoSize = true;
+            this.labelCaptcha.Font = new System.Drawing.Font("Lucida Handwriting", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCaptcha.ForeColor = System.Drawing.Color.Maroon;
+            this.labelCaptcha.Location = new System.Drawing.Point(187, 146);
+            this.labelCaptcha.Name = "labelCaptcha";
+            this.labelCaptcha.Size = new System.Drawing.Size(163, 40);
+            this.labelCaptcha.TabIndex = 12;
+            this.labelCaptcha.Text = "Captcha";
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 234);
+            this.ClientSize = new System.Drawing.Size(531, 341);
+            this.Controls.Add(this.labelCaptcha);
+            this.Controls.Add(this.textBoxCaptcha);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonSignUp);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxPassword);
@@ -128,6 +164,9 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonSignUp;
+        private System.Windows.Forms.TextBox textBoxCaptcha;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelCaptcha;
     }
 }
 
