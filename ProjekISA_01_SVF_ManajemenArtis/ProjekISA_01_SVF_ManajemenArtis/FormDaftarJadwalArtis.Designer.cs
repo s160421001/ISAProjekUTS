@@ -138,7 +138,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridViewJadwal);
             this.Name = "FormDaftarJadwalArtis";
-            this.Text = "FormDaftarJadwalArtis";
+            this.Text = "Jadwal";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJadwal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

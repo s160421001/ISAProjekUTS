@@ -66,11 +66,11 @@
     <Compile Include="FormCekManajer.Designer.cs">
       <DependentUpon>FormCekManajer.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDaftarJadwal.cs">
+    <Compile Include="FormDaftarJadwalArtisYangDiManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDaftarJadwal.Designer.cs">
-      <DependentUpon>FormDaftarJadwal.cs</DependentUpon>
+    <Compile Include="FormDaftarJadwalArtisYangDiManage.Designer.cs">
+      <DependentUpon>FormDaftarJadwalArtisYangDiManage.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDaftarKontrakBaru.cs">
       <SubType>Form</SubType>
@@ -101,6 +101,12 @@
     </Compile>
     <Compile Include="FormDetailKontrakEdit.Designer.cs">
       <DependentUpon>FormDetailKontrakEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDaftarJadwalArtis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarJadwalArtis.Designer.cs">
+      <DependentUpon>FormDaftarJadwalArtis.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -134,8 +140,11 @@
     <EmbeddedResource Include="FormCekManajer.resx">
       <DependentUpon>FormCekManajer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDaftarJadwal.resx">
-      <DependentUpon>FormDaftarJadwal.cs</DependentUpon>
+    <EmbeddedResource Include="FormDaftarJadwalArtis.resx">
+      <DependentUpon>FormDaftarJadwalArtis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftarJadwalArtisYangDiManage.resx">
+      <DependentUpon>FormDaftarJadwalArtisYangDiManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDaftarKontrakBaru.resx">
       <DependentUpon>FormDaftarKontrakBaru.cs</DependentUpon>

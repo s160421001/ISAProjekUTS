@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjekISA_01_SVF_ManajemenArtis
 {
-    public partial class FormDaftarJadwal : Form
+    public partial class FormDaftarJadwalArtisYangDiManage : Form
     {
-        public FormDaftarJadwal()
+        public FormDaftarJadwalArtisYangDiManage()
         {
             InitializeComponent();
         }
