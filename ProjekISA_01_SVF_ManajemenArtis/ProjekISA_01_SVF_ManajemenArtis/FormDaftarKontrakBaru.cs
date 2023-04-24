@@ -144,6 +144,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 if (manager.Title == jabatan.superAdmin)
                 {
                     list = Kontrak_kerja.BacaData("k.status_artis", "kosong");
+                    //list = list.OrderBy(k => k.Judul).ToList();
                 }
             }
 

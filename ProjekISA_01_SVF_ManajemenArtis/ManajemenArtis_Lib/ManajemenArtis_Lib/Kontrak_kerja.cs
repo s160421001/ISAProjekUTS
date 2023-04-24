@@ -253,6 +253,40 @@ namespace ManajemenArtis_Lib
             return tmpList;
         }
 
+        public static List<Kontrak_kerja> BacaDataSpesifikKontrakTerimaArtis(int id)
+        {
+            string sql = "SELECT k.id, k.judul,k.pengaju,k.lokasi, k.deskripsi, k.tanggal_buat, k.tanggal_acara, k.status_artis, k.manajer_id, k.artis_id" +
+               " FROM kontrak_kerja k " +
+               " INNER JOIN artis a ON a.id=k.artis_id " +
+               " INNER JOIN manajer m ON m.id=k.manajer_id " +
+               " WHERE k.artis_id=" + id +
+               " AND k.status_artis LIKE'%terima%';";
+
+            MySqlDataReader result = Koneksi.JalankanQuery(sql);
+
+            List<Kontrak_kerja> tmpList = new List<Kontrak_kerja>();
+
+            while (result.Read())
+            {
+                List<Artis> tmpArtis = Artis.BacaData("a.id", result.GetInt32("artis_id").ToString());
+                List<Manager> tmpManajer = Manager.BacaData("id", result.GetInt32("manajer_id").ToString());
+
+                Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
+                    result.GetString("judul"),
+                    result.GetString("pengaju"),
+                    result.GetString("lokasi"),
+                    result.GetString("deskripsi"),
+                    result.GetDateTime("tanggal_buat"),
+                    result.GetDateTime("tanggal_acara"),
+                    result.GetString("status_artis"),
+                    tmpManajer[0], tmpArtis[0]
+                    );
+
+                tmpList.Add(tmp);
+            }
+            return tmpList;
+        }
+
         public static bool TambahKontrak(Kontrak_kerja k)
         {
             string sql = "insert into kontrak_kerja(judul, pengaju, lokasi, deskripsi, tanggal_buat, tanggal_acara, status_artis, manajer_id, artis_id) " +

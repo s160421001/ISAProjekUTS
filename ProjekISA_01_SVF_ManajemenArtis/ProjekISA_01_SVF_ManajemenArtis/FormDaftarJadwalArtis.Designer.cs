@@ -64,6 +64,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Nama Acara (Z-A)";
             this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -77,6 +78,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Nama Acara (A-Z)";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -90,6 +92,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Tanggal Ditambahkan";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -103,6 +106,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Tanggal Kegiatan";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label2
             // 
@@ -124,6 +128,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.dataGridViewJadwal.RowTemplate.Height = 28;
             this.dataGridViewJadwal.Size = new System.Drawing.Size(708, 350);
             this.dataGridViewJadwal.TabIndex = 68;
+            this.dataGridViewJadwal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewJadwal_CellContentClick);
             // 
             // FormDaftarJadwalArtis
             // 
@@ -139,6 +144,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.Controls.Add(this.dataGridViewJadwal);
             this.Name = "FormDaftarJadwalArtis";
             this.Text = "Jadwal";
+            this.Load += new System.EventHandler(this.FormDaftarJadwalArtis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJadwal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

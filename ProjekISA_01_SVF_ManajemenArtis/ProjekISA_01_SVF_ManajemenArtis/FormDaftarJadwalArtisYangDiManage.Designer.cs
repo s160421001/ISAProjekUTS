@@ -52,6 +52,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.dataGridViewJadwal.RowTemplate.Height = 28;
             this.dataGridViewJadwal.Size = new System.Drawing.Size(708, 350);
             this.dataGridViewJadwal.TabIndex = 9;
+            this.dataGridViewJadwal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewJadwal_CellContentClick);
             // 
             // label2
             // 
@@ -75,6 +76,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Tanggal Kegiatan";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -88,6 +90,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Tanggal Ditambahkan";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -101,6 +104,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Nama Acara (A-Z)";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton4
             // 
@@ -114,6 +118,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Nama Acara (Z-A)";
             this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // label3
             // 
@@ -135,6 +140,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.comboBoxArtis.Name = "comboBoxArtis";
             this.comboBoxArtis.Size = new System.Drawing.Size(438, 34);
             this.comboBoxArtis.TabIndex = 18;
+            this.comboBoxArtis.SelectedIndexChanged += new System.EventHandler(this.comboBoxArtis_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -167,6 +173,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormDaftarJadwalArtisYangDiManage";
             this.Text = "Jadwal";
+            this.Load += new System.EventHandler(this.FormDaftarJadwalArtisYangDiManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJadwal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

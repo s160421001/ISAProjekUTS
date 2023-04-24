@@ -62,6 +62,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                             cekKontrakTertolakToolStripMenuItem.Visible = true;
                             tambahKontrakToolStripMenuItem.Visible = true;
                             jadwalToolStripMenuItem.Visible = true;
+                            cekJadwalManagerToolStripMenuItem.Visible = true;
                             manajemenToolStripMenuItem.Visible = true;
                             cekArtisToolStripMenuItem.Visible = true;
                             pesanMasukToolStripMenuItem.Visible = true;
@@ -83,6 +84,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                     cekKontrakTertolakToolStripMenuItem.Visible = true;
                     tambahKontrakToolStripMenuItem.Visible = true;
                     jadwalToolStripMenuItem.Visible = true;
+                    cekJadwalManagerToolStripMenuItem.Visible = true;
                     manajemenToolStripMenuItem.Visible = true;
                     pesanMasukToolStripMenuItem.Visible = true;
                     cekArtisToolStripMenuItem.Visible = true;
@@ -99,6 +101,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                     cekKontrakBaruToolStripMenuItem.Visible = true;
                     cekKontrakTertolakToolStripMenuItem.Visible = true;
                     jadwalToolStripMenuItem.Visible = true;
+                    cekJadwalArtisToolStripMenuItem.Visible = true;
                     manajemenToolStripMenuItem.Visible = true;
                     pesanMasukToolStripMenuItem.Visible = true;
                     cekManajerToolStripMenuItem.Visible = true;
@@ -242,11 +245,11 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             Form form = Application.OpenForms["FormDaftarJadwalArtis"];
             if (form == null)
             {
-                if (manager != null)
+                if (artis != null)
                 {
                     FormDaftarJadwalArtis formDaftarJadwalArtis = new FormDaftarJadwalArtis();
                     formDaftarJadwalArtis.MdiParent = this;
-                    //formDaftarJadwalArtis.artis = artis;
+                    formDaftarJadwalArtis.artis = artis;
                     formDaftarJadwalArtis.Show();
                 }
             }
@@ -266,7 +269,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 {
                     FormDaftarJadwalArtisYangDiManage formDaftarJadwal = new FormDaftarJadwalArtisYangDiManage();
                     formDaftarJadwal.MdiParent = this;
-                    //formDaftarJadwal.manager = manager;
+                    formDaftarJadwal.manager = manager;
                     formDaftarJadwal.Show();
                 }
             }

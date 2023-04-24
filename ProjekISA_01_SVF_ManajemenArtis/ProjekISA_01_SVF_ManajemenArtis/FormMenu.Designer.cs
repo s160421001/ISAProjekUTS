@@ -116,6 +116,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.cekJadwalManagerToolStripMenuItem.Name = "cekJadwalManagerToolStripMenuItem";
             this.cekJadwalManagerToolStripMenuItem.Size = new System.Drawing.Size(281, 28);
             this.cekJadwalManagerToolStripMenuItem.Text = "Cek Jadwal Manager";
+            this.cekJadwalManagerToolStripMenuItem.Visible = false;
             this.cekJadwalManagerToolStripMenuItem.Click += new System.EventHandler(this.cekJadwalManagerToolStripMenuItem_Click);
             // 
             // cekJadwalArtisToolStripMenuItem
@@ -123,6 +124,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.cekJadwalArtisToolStripMenuItem.Name = "cekJadwalArtisToolStripMenuItem";
             this.cekJadwalArtisToolStripMenuItem.Size = new System.Drawing.Size(281, 28);
             this.cekJadwalArtisToolStripMenuItem.Text = "Cek Jadwal Artis";
+            this.cekJadwalArtisToolStripMenuItem.Visible = false;
             this.cekJadwalArtisToolStripMenuItem.Click += new System.EventHandler(this.cekJadwalArtisToolStripMenuItem_Click);
             // 
             // kontrakToolStripMenuItem

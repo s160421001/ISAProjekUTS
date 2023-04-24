@@ -24,10 +24,10 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             try
             {
                 Koneksi koneksi = new Koneksi();
-                MessageBox.Show("Koneksi Berhasil");
+                //MessageBox.Show("Koneksi Berhasil");
 
                 Random rand = new Random();
-                int num = rand.Next(6, 9);
+                int num = 6;
                 string captcha = "";
                 int total = 0;
 
@@ -90,6 +90,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 {
                     MessageBox.Show("Captcha is incorrect, please try again!", "Information");
                     this.OnLoad(e);
+                    textBoxCaptcha.Clear();
                 }
             }
             catch (Exception ex)

@@ -48,7 +48,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.label2.Location = new System.Drawing.Point(23, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(159, 34);
-            this.label2.TabIndex = 4;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Password";
             // 
             // label1
@@ -58,7 +58,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.label1.Location = new System.Drawing.Point(16, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 34);
-            this.label1.TabIndex = 3;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Username";
             // 
             // textBoxUsername
@@ -68,7 +68,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.textBoxUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(300, 43);
-            this.textBoxUsername.TabIndex = 6;
+            this.textBoxUsername.TabIndex = 1;
             // 
             // textBoxPassword
             // 
@@ -77,7 +77,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(300, 43);
-            this.textBoxPassword.TabIndex = 7;
+            this.textBoxPassword.TabIndex = 3;
             // 
             // button1
             // 
@@ -86,7 +86,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(139, 45);
-            this.button1.TabIndex = 8;
+            this.button1.TabIndex = 7;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -98,7 +98,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.buttonSignUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSignUp.Name = "buttonSignUp";
             this.buttonSignUp.Size = new System.Drawing.Size(173, 45);
-            this.buttonSignUp.TabIndex = 9;
+            this.buttonSignUp.TabIndex = 8;
             this.buttonSignUp.Text = "Sign Up";
             this.buttonSignUp.UseVisualStyleBackColor = true;
             this.buttonSignUp.Click += new System.EventHandler(this.buttonSignUp_Click);
@@ -110,7 +110,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.textBoxCaptcha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCaptcha.Name = "textBoxCaptcha";
             this.textBoxCaptcha.Size = new System.Drawing.Size(300, 43);
-            this.textBoxCaptcha.TabIndex = 11;
+            this.textBoxCaptcha.TabIndex = 6;
             // 
             // label3
             // 
@@ -119,7 +119,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.label3.Location = new System.Drawing.Point(43, 204);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(139, 34);
-            this.label3.TabIndex = 10;
+            this.label3.TabIndex = 5;
             this.label3.Text = "Captcha";
             // 
             // labelCaptcha
@@ -130,7 +130,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.labelCaptcha.Location = new System.Drawing.Point(187, 146);
             this.labelCaptcha.Name = "labelCaptcha";
             this.labelCaptcha.Size = new System.Drawing.Size(163, 40);
-            this.labelCaptcha.TabIndex = 12;
+            this.labelCaptcha.TabIndex = 4;
             this.labelCaptcha.Text = "Captcha";
             // 
             // FormLogin
@@ -150,7 +150,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormLogin";
-            this.Text = "Login";
+            this.Text = "8";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
