@@ -252,6 +252,24 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                     MessageBox.Show(ex.Message, "Error");
                 }
             }
+            if (e.ColumnIndex == dataGridViewJadwal.Columns["gridButtonCetak"].Index && e.RowIndex >= 0)
+            {
+                Kontrak_kerja tmpKontrak = new Kontrak_kerja(
+                        int.Parse(dataGridViewJadwal.CurrentRow.Cells["id"].Value.ToString()),
+                        dataGridViewJadwal.CurrentRow.Cells["judul"].Value.ToString(),
+                        dataGridViewJadwal.CurrentRow.Cells["pengaju"].Value.ToString(),
+                        dataGridViewJadwal.CurrentRow.Cells["lokasi"].Value.ToString(),
+                        dataGridViewJadwal.CurrentRow.Cells["deskripsi"].Value.ToString(),
+                        DateTime.Parse(dataGridViewJadwal.CurrentRow.Cells["tglbuat"].Value.ToString()),
+                        DateTime.Parse(dataGridViewJadwal.CurrentRow.Cells["tglacara"].Value.ToString()),
+                        dataGridViewJadwal.CurrentRow.Cells["status"].Value.ToString(),
+                        artis.Manager, artis);
+
+                Kontrak_kerja.PrintKontrak(tmpKontrak,
+                    "kontrak.txt", new Font("Couriew New", 12));
+
+                MessageBox.Show("Kontrak telah tercetak");
+            }
         }
     }
 }
