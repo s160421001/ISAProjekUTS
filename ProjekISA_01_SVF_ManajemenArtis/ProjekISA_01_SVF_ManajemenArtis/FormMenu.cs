@@ -22,7 +22,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             InitializeComponent();
         }
 
-        private void FormMenu_Load_1(object sender, EventArgs e)
+        public void FormMenu_Load_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
             this.IsMdiContainer = true;
@@ -65,7 +65,6 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                             cekJadwalManagerToolStripMenuItem.Visible = true;
                             manajemenToolStripMenuItem.Visible = true;
                             cekArtisToolStripMenuItem.Visible = true;
-                            pesanMasukToolStripMenuItem.Visible = true;
                             break;
                         }
                         else
@@ -86,7 +85,6 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                     jadwalToolStripMenuItem.Visible = true;
                     cekJadwalManagerToolStripMenuItem.Visible = true;
                     manajemenToolStripMenuItem.Visible = true;
-                    pesanMasukToolStripMenuItem.Visible = true;
                     cekArtisToolStripMenuItem.Visible = true;
                     cekManajerToolStripMenuItem.Visible = true;
                 }
@@ -103,7 +101,6 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                     jadwalToolStripMenuItem.Visible = true;
                     cekJadwalArtisToolStripMenuItem.Visible = true;
                     manajemenToolStripMenuItem.Visible = true;
-                    pesanMasukToolStripMenuItem.Visible = true;
                     cekManajerToolStripMenuItem.Visible = true;
                 }
                 else

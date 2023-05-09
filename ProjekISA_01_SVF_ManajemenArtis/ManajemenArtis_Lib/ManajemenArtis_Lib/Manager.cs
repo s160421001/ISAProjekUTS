@@ -68,7 +68,7 @@ namespace ManajemenArtis_Lib
             //Password tidak diambil karena tidak perlu menyimpan password pada obyek manajer untuk alasan keamanan
             string sql = "SELECT id, nama, tanggal_lahir, tanggal_masuk, username, jabatan " +
                     "FROM manajer " +
-                    "WHERE username='" + username + "' AND password='" + password + "';";
+                    "WHERE username='" + username + "' AND password='" + Cryptography.EncryptTripleDES(password) + "';";
 
             MySqlDataReader result = Koneksi.JalankanQuery(sql);
 
@@ -151,7 +151,7 @@ namespace ManajemenArtis_Lib
                 m.TglLahir.ToString("yyyy-MM-dd") + "','" +
                 m.TglMasuk.ToString("yyyy-MM-dd") + "','" +
                 m.Username + "','" +
-                m.Password + "','" +
+                Cryptography.EncryptTripleDES(m.Password) + "','" +
                 jabatan.biasa + "')";
 
             Koneksi.JalankanPerintahDML(sql);

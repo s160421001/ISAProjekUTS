@@ -25,7 +25,7 @@ namespace ManajemenArtis_Lib
         private Artis artis;
         #endregion
 
-        #region construct
+        #region constructor
         public Kontrak_kerja()
         {
             this.Id = 0;
@@ -68,7 +68,7 @@ namespace ManajemenArtis_Lib
         public Artis Artis { get => artis; set => artis = value; }
         #endregion
 
-        #region METHODS        
+        #region METHODS     
         public static List<Kontrak_kerja> BacaData(string criteriaName, string criteriaValue)
         {
             string sql = "SELECT k.id, k.judul,k.pengaju,k.lokasi, k.deskripsi, k.tanggal_buat, k.tanggal_acara, k.status_artis, k.manajer_id, k.artis_id" +
@@ -94,19 +94,11 @@ namespace ManajemenArtis_Lib
                 List<Artis> tmpArtis = Artis.BacaData("a.id", result.GetInt32("artis_id").ToString());
                 List<Manager> tmpManajer = Manager.BacaData("id", result.GetInt32("manajer_id").ToString());
 
-                //Artis tmpArtis = new Artis();
-                //tmpArtis.Id = result.GetInt32("artis_id");
-                //tmpArtis.Nama = result.GetString("nama");
-
-                //Manager tmpMan = new Manager();
-                //tmpMan.Id = result.GetInt32("manajer_id");
-                //tmpMan.Nama = result.GetString("nama");
-
                 Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
                     result.GetString("judul"),
                     Cryptography.DecryptTripleDES(result.GetString("pengaju")),
-                    Cryptography.DecryptTripleDES(result.GetString("lokasi")),
-                    result.GetString("deskripsi"),
+                    result.GetString("lokasi"),
+                    Cryptography.DecryptTripleDES(result.GetString("deskripsi")),
                     result.GetDateTime("tanggal_buat"),
                     result.GetDateTime("tanggal_acara"),
                     result.GetString("status_artis"),
@@ -138,8 +130,8 @@ namespace ManajemenArtis_Lib
                 Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
                     result.GetString("judul"),
                     Cryptography.DecryptTripleDES(result.GetString("pengaju")),
-                    Cryptography.DecryptTripleDES(result.GetString("lokasi")),
-                    result.GetString("deskripsi"),
+                    result.GetString("lokasi"),
+                    Cryptography.DecryptTripleDES(result.GetString("deskripsi")),
                     result.GetDateTime("tanggal_buat"),
                     result.GetDateTime("tanggal_acara"),
                     result.GetString("status_artis"),
@@ -172,8 +164,8 @@ namespace ManajemenArtis_Lib
                 Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
                     result.GetString("judul"),
                     Cryptography.DecryptTripleDES(result.GetString("pengaju")),
-                    Cryptography.DecryptTripleDES(result.GetString("lokasi")),
-                    result.GetString("deskripsi"),
+                    result.GetString("lokasi"),
+                    Cryptography.DecryptTripleDES(result.GetString("deskripsi")),
                     result.GetDateTime("tanggal_buat"),
                     result.GetDateTime("tanggal_acara"),
                     result.GetString("status_artis"),
@@ -206,8 +198,8 @@ namespace ManajemenArtis_Lib
                 Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
                     result.GetString("judul"),
                     Cryptography.DecryptTripleDES(result.GetString("pengaju")),
-                    Cryptography.DecryptTripleDES(result.GetString("lokasi")),
-                    result.GetString("deskripsi"),
+                    result.GetString("lokasi"),
+                    Cryptography.DecryptTripleDES(result.GetString("deskripsi")),
                     result.GetDateTime("tanggal_buat"),
                     result.GetDateTime("tanggal_acara"),
                     result.GetString("status_artis"),
@@ -240,8 +232,8 @@ namespace ManajemenArtis_Lib
                 Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
                     result.GetString("judul"),
                     Cryptography.DecryptTripleDES(result.GetString("pengaju")),
-                    Cryptography.DecryptTripleDES(result.GetString("lokasi")),
-                    result.GetString("deskripsi"),
+                    result.GetString("lokasi"),
+                    Cryptography.DecryptTripleDES(result.GetString("deskripsi")),
                     result.GetDateTime("tanggal_buat"),
                     result.GetDateTime("tanggal_acara"),
                     result.GetString("status_artis"),
@@ -274,8 +266,8 @@ namespace ManajemenArtis_Lib
                 Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
                     result.GetString("judul"),
                     Cryptography.DecryptTripleDES(result.GetString("pengaju")),
-                    Cryptography.DecryptTripleDES(result.GetString("lokasi")),
-                    result.GetString("deskripsi"),
+                    result.GetString("lokasi"),
+                    Cryptography.DecryptTripleDES(result.GetString("deskripsi")),
                     result.GetDateTime("tanggal_buat"),
                     result.GetDateTime("tanggal_acara"),
                     result.GetString("status_artis"),
@@ -287,14 +279,51 @@ namespace ManajemenArtis_Lib
             return tmpList;
         }
 
+        public static string GenerateIdKontrakTerbaru()
+        {
+            string sql = "select id from kontrak_kerja ORDER BY id DESC LIMIT 1";
+
+            MySqlDataReader hasil = Koneksi.JalankanQuery(sql);
+            string kodeBaru = "";
+
+            if (hasil.Read() == true)
+            {
+                if (hasil.GetValue(0).ToString() != "")
+                {
+                    int noUrutKode = int.Parse(hasil.GetInt32(0).ToString()) + 1;
+                    kodeBaru = noUrutKode.ToString();
+
+                }
+            }
+            else
+            {
+                //jika belum ada kode maka no kontrak di set 1
+                kodeBaru = "1";
+            }
+            return kodeBaru;
+        }
+
         public static bool TambahKontrak(Kontrak_kerja k)
         {
-            string sql = "insert into kontrak_kerja(judul, pengaju, lokasi, deskripsi, tanggal_buat, tanggal_acara, status_artis, manajer_id, artis_id) " +
+            //using stegano to hide lokasi
+            string originalPath = "C:\\Users\\Steven Christopher\\Desktop\\UBAYA\\Semester 4\\Information Security and Assurance\\ISAProjekUTS\\ProjekISA_01_SVF_ManajemenArtis\\SteganoPict\\kontrak.png";
+            Bitmap img = new Bitmap(originalPath);
+
+            string txtlokasi = k.Lokasi;
+            Bitmap imgOutput = Steganography.SteganographyHelper.embedText(txtlokasi, img);
+
+            string outputPathForSave = "C:\\Users\\Steven Christopher\\Desktop\\UBAYA\\Semester 4\\Information Security and Assurance\\ISAProjekUTS\\ProjekISA_01_SVF_ManajemenArtis\\SteganoPict\\kontrak" + GenerateIdKontrakTerbaru() + ".png";
+            string outputPathForDatabase = @"C:\\\Users\\\Steven Christopher\\\Desktop\\\UBAYA\\\Semester 4\\\Information Security and Assurance\\\ISAProjekUTS\\\ProjekISA_01_SVF_ManajemenArtis\\\SteganoPict\\\kontrak" + GenerateIdKontrakTerbaru() + ".png";
+            imgOutput.Save(outputPathForSave);
+
+            //add kontrak
+            string sql = "insert into kontrak_kerja(id, judul, pengaju, lokasi, deskripsi, tanggal_buat, tanggal_acara, status_artis, manajer_id, artis_id) " +
                 "values ('" +
+                GenerateIdKontrakTerbaru() + "','" +
                 k.Judul + "','" +
                 Cryptography.EncryptTripleDES(k.Pengaju) + "','" +
-                Cryptography.EncryptTripleDES(k.Lokasi) + "','" +
-                k.Deskripsi + "','" +
+                outputPathForDatabase + "','" +
+                Cryptography.EncryptTripleDES(k.Deskripsi) + "','" +
                 k.TglBuat.ToString("yyyy-MM-dd") + "','" +
                 k.TglAcara.ToString("yyyy-MM-dd") + "','" +
                 "kosong','" +
@@ -309,7 +338,7 @@ namespace ManajemenArtis_Lib
         }
         public static int EditData(Kontrak_kerja k)
         {
-            string sql = "Update kontrak_kerja set deskripsi='" + k.Deskripsi + "' where id='" + k.Id + "'";
+            string sql = "Update kontrak_kerja set deskripsi='" + Cryptography.EncryptTripleDES(k.Deskripsi) + "' where id='" + k.Id + "'";
 
             int result = Koneksi.JalankanPerintahDML(sql);
             return result;
@@ -329,6 +358,20 @@ namespace ManajemenArtis_Lib
             return false;
         }
 
+        public static int AmbilIdArtisDariKontrak(Kontrak_kerja k)
+        {
+            string sql = "select artis_id from kontrak_kerja where id = " + k.Id;
+
+            MySqlDataReader hasil = Koneksi.JalankanQuery(sql);
+
+            int idArtis = 0;
+            if (hasil.Read() == true)
+            {
+                idArtis = int.Parse(hasil.GetInt32(0).ToString());
+            }
+            return idArtis;
+        }
+
         public static void PrintKontrak(Kontrak_kerja kontrak, string AlamatFile, Font tipeFont)
         {
             //step 2 siapkan filetext yang akan ditulisi
@@ -340,9 +383,14 @@ namespace ManajemenArtis_Lib
             printFile.WriteLine("===================================================");
             printFile.WriteLine("Judul          : " + kontrak.Judul);
             printFile.WriteLine("Pengaju        : " + Cryptography.DecryptTripleDES(kontrak.Pengaju));
-            printFile.WriteLine("Lokasi         : " + Cryptography.DecryptTripleDES(kontrak.Lokasi));
+
+            //extract lokasi from stegano
+            Bitmap imgEmbed = new Bitmap(kontrak.Lokasi);
+            string lokasi = Steganography.SteganographyHelper.extractText(imgEmbed);
+
+            printFile.WriteLine("Lokasi         : " + lokasi);
             printFile.WriteLine("Tanggal Acara  : " + kontrak.TglAcara.ToString("dd-MM-yyyy"));
-            printFile.WriteLine("Deskripsi      : " + kontrak.Deskripsi);
+            printFile.WriteLine("Deskripsi      : " + Cryptography.DecryptTripleDES(kontrak.Deskripsi));
             printFile.WriteLine("===================================================");
             printFile.WriteLine("Artis          : " + kontrak.Artis.Nama);
             printFile.WriteLine("===================================================");

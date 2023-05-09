@@ -156,7 +156,21 @@ namespace ManajemenArtis_Lib
                 a.Status + "','0')";
 
             Koneksi.JalankanPerintahDML(sql);
-        }       
+        }
+
+        public static string AmbilNamaArtis(int id)
+        {
+            string sql = "select nama from artis where id = " + id;
+
+            MySqlDataReader hasil = Koneksi.JalankanQuery(sql);
+
+            string nama = "";
+            if (hasil.Read() == true)
+            {
+                nama = hasil.GetString(0);
+            }
+            return nama;
+        }
         #endregion
     }
 }

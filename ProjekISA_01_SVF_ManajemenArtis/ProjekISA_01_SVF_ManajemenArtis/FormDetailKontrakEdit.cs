@@ -21,11 +21,15 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         public Kontrak_kerja kontrak = new Kontrak_kerja();
         private void FormDetailKontrakEdit_Load(object sender, EventArgs e)
         {
+            //extract message from stegano
+            Bitmap imgEmbed = new Bitmap(kontrak.Lokasi);
+            string lokasi = Steganography.SteganographyHelper.extractText(imgEmbed);
+
             labelJudul.Text = kontrak.Judul;
             labelNamaArtis.Text = kontrak.Artis.Nama;
             labelNamaPengaju.Text = kontrak.Pengaju;
             labelTanggalAcara.Text = kontrak.TglAcara.ToString();
-            labelLokasi.Text = kontrak.Lokasi;
+            labelLokasi.Text = lokasi;
             textBoxIsi.Text = kontrak.Deskripsi;
         }
 

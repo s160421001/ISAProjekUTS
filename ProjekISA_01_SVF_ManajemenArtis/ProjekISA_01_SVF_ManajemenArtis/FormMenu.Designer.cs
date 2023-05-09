@@ -43,7 +43,6 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.cekKontrakTertolakToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tambahKontrakToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manajemenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pesanMasukToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cekArtisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cekManajerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,9 +56,9 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.label1.BackColor = System.Drawing.Color.Brown;
             this.label1.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(14, 1178);
+            this.label1.Location = new System.Drawing.Point(12, 942);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(431, 61);
+            this.label1.Size = new System.Drawing.Size(363, 51);
             this.label1.TabIndex = 2;
             this.label1.Text = "Selamat Datang,";
             // 
@@ -69,9 +68,9 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.labelNama.BackColor = System.Drawing.Color.Brown;
             this.labelNama.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNama.ForeColor = System.Drawing.Color.White;
-            this.labelNama.Location = new System.Drawing.Point(429, 1178);
+            this.labelNama.Location = new System.Drawing.Point(381, 942);
             this.labelNama.Name = "labelNama";
-            this.labelNama.Size = new System.Drawing.Size(163, 61);
+            this.labelNama.Size = new System.Drawing.Size(137, 51);
             this.labelNama.TabIndex = 3;
             this.labelNama.Text = "nama";
             // 
@@ -79,7 +78,6 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.menuStrip1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
@@ -88,8 +86,9 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.manajemenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menuStrip1.Size = new System.Drawing.Size(2164, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(1710, 31);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStripMain";
             // 
@@ -97,7 +96,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // 
             this.homeToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(91, 31);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(75, 27);
             this.homeToolStripMenuItem.Text = "Home";
             // 
             // jadwalToolStripMenuItem
@@ -107,14 +106,14 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.cekJadwalArtisToolStripMenuItem});
             this.jadwalToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jadwalToolStripMenuItem.Name = "jadwalToolStripMenuItem";
-            this.jadwalToolStripMenuItem.Size = new System.Drawing.Size(103, 31);
+            this.jadwalToolStripMenuItem.Size = new System.Drawing.Size(86, 27);
             this.jadwalToolStripMenuItem.Text = "Jadwal";
             this.jadwalToolStripMenuItem.Visible = false;
             // 
             // cekJadwalManagerToolStripMenuItem
             // 
             this.cekJadwalManagerToolStripMenuItem.Name = "cekJadwalManagerToolStripMenuItem";
-            this.cekJadwalManagerToolStripMenuItem.Size = new System.Drawing.Size(339, 36);
+            this.cekJadwalManagerToolStripMenuItem.Size = new System.Drawing.Size(281, 28);
             this.cekJadwalManagerToolStripMenuItem.Text = "Cek Jadwal Manager";
             this.cekJadwalManagerToolStripMenuItem.Visible = false;
             this.cekJadwalManagerToolStripMenuItem.Click += new System.EventHandler(this.cekJadwalManagerToolStripMenuItem_Click);
@@ -122,7 +121,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // cekJadwalArtisToolStripMenuItem
             // 
             this.cekJadwalArtisToolStripMenuItem.Name = "cekJadwalArtisToolStripMenuItem";
-            this.cekJadwalArtisToolStripMenuItem.Size = new System.Drawing.Size(339, 36);
+            this.cekJadwalArtisToolStripMenuItem.Size = new System.Drawing.Size(281, 28);
             this.cekJadwalArtisToolStripMenuItem.Text = "Cek Jadwal Artis";
             this.cekJadwalArtisToolStripMenuItem.Visible = false;
             this.cekJadwalArtisToolStripMenuItem.Click += new System.EventHandler(this.cekJadwalArtisToolStripMenuItem_Click);
@@ -136,14 +135,14 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.tambahKontrakToolStripMenuItem});
             this.kontrakToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kontrakToolStripMenuItem.Name = "kontrakToolStripMenuItem";
-            this.kontrakToolStripMenuItem.Size = new System.Drawing.Size(111, 31);
+            this.kontrakToolStripMenuItem.Size = new System.Drawing.Size(92, 27);
             this.kontrakToolStripMenuItem.Text = "Kontrak";
             this.kontrakToolStripMenuItem.Visible = false;
             // 
             // cekKontrakBaruToolStripMenuItem
             // 
             this.cekKontrakBaruToolStripMenuItem.Name = "cekKontrakBaruToolStripMenuItem";
-            this.cekKontrakBaruToolStripMenuItem.Size = new System.Drawing.Size(343, 36);
+            this.cekKontrakBaruToolStripMenuItem.Size = new System.Drawing.Size(279, 28);
             this.cekKontrakBaruToolStripMenuItem.Text = "Cek Kontrak Baru";
             this.cekKontrakBaruToolStripMenuItem.Visible = false;
             this.cekKontrakBaruToolStripMenuItem.Click += new System.EventHandler(this.cekKontrakBaruToolStripMenuItem_Click);
@@ -151,7 +150,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // cekKontrakPendingToolStripMenuItem
             // 
             this.cekKontrakPendingToolStripMenuItem.Name = "cekKontrakPendingToolStripMenuItem";
-            this.cekKontrakPendingToolStripMenuItem.Size = new System.Drawing.Size(343, 36);
+            this.cekKontrakPendingToolStripMenuItem.Size = new System.Drawing.Size(279, 28);
             this.cekKontrakPendingToolStripMenuItem.Text = "Cek Kontrak Pending";
             this.cekKontrakPendingToolStripMenuItem.Visible = false;
             this.cekKontrakPendingToolStripMenuItem.Click += new System.EventHandler(this.cekKontrakPendingToolStripMenuItem_Click);
@@ -159,7 +158,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // cekKontrakTertolakToolStripMenuItem
             // 
             this.cekKontrakTertolakToolStripMenuItem.Name = "cekKontrakTertolakToolStripMenuItem";
-            this.cekKontrakTertolakToolStripMenuItem.Size = new System.Drawing.Size(343, 36);
+            this.cekKontrakTertolakToolStripMenuItem.Size = new System.Drawing.Size(279, 28);
             this.cekKontrakTertolakToolStripMenuItem.Text = "Cek Kontrak Tertolak";
             this.cekKontrakTertolakToolStripMenuItem.Visible = false;
             this.cekKontrakTertolakToolStripMenuItem.Click += new System.EventHandler(this.cekKontrakTertolakToolStripMenuItem_Click);
@@ -167,7 +166,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // tambahKontrakToolStripMenuItem
             // 
             this.tambahKontrakToolStripMenuItem.Name = "tambahKontrakToolStripMenuItem";
-            this.tambahKontrakToolStripMenuItem.Size = new System.Drawing.Size(343, 36);
+            this.tambahKontrakToolStripMenuItem.Size = new System.Drawing.Size(279, 28);
             this.tambahKontrakToolStripMenuItem.Text = "Tambah Kontrak";
             this.tambahKontrakToolStripMenuItem.Visible = false;
             this.tambahKontrakToolStripMenuItem.Click += new System.EventHandler(this.tambahKontrakToolStripMenuItem_Click);
@@ -175,26 +174,18 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // manajemenToolStripMenuItem
             // 
             this.manajemenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pesanMasukToolStripMenuItem,
             this.cekArtisToolStripMenuItem,
             this.cekManajerToolStripMenuItem});
             this.manajemenToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manajemenToolStripMenuItem.Name = "manajemenToolStripMenuItem";
-            this.manajemenToolStripMenuItem.Size = new System.Drawing.Size(153, 31);
+            this.manajemenToolStripMenuItem.Size = new System.Drawing.Size(125, 27);
             this.manajemenToolStripMenuItem.Text = "Manajemen";
             this.manajemenToolStripMenuItem.Visible = false;
-            // 
-            // pesanMasukToolStripMenuItem
-            // 
-            this.pesanMasukToolStripMenuItem.Name = "pesanMasukToolStripMenuItem";
-            this.pesanMasukToolStripMenuItem.Size = new System.Drawing.Size(259, 36);
-            this.pesanMasukToolStripMenuItem.Text = "Pesan Masuk";
-            this.pesanMasukToolStripMenuItem.Visible = false;
             // 
             // cekArtisToolStripMenuItem
             // 
             this.cekArtisToolStripMenuItem.Name = "cekArtisToolStripMenuItem";
-            this.cekArtisToolStripMenuItem.Size = new System.Drawing.Size(259, 36);
+            this.cekArtisToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.cekArtisToolStripMenuItem.Text = "Cek Artis";
             this.cekArtisToolStripMenuItem.Visible = false;
             this.cekArtisToolStripMenuItem.Click += new System.EventHandler(this.cekArtisToolStripMenuItem_Click);
@@ -202,7 +193,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // cekManajerToolStripMenuItem
             // 
             this.cekManajerToolStripMenuItem.Name = "cekManajerToolStripMenuItem";
-            this.cekManajerToolStripMenuItem.Size = new System.Drawing.Size(259, 36);
+            this.cekManajerToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.cekManajerToolStripMenuItem.Text = "Cek Manajer";
             this.cekManajerToolStripMenuItem.Visible = false;
             this.cekManajerToolStripMenuItem.Click += new System.EventHandler(this.cekManajerToolStripMenuItem_Click);
@@ -212,9 +203,9 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(1806, 1189);
+            this.label2.Location = new System.Drawing.Point(1605, 951);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(196, 46);
+            this.label2.Size = new System.Drawing.Size(169, 40);
             this.label2.TabIndex = 5;
             this.label2.Text = "Manager:";
             // 
@@ -223,21 +214,21 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.labelManager.AutoSize = true;
             this.labelManager.BackColor = System.Drawing.Color.White;
             this.labelManager.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
-            this.labelManager.Location = new System.Drawing.Point(1992, 1189);
+            this.labelManager.Location = new System.Drawing.Point(1771, 951);
             this.labelManager.Name = "labelManager";
-            this.labelManager.Size = new System.Drawing.Size(123, 46);
+            this.labelManager.Size = new System.Drawing.Size(106, 40);
             this.labelManager.TabIndex = 6;
             this.labelManager.Text = "nama";
             // 
             // FormMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImage = global::ProjekISA_01_SVF_ManajemenArtis.Properties.Resources.Main_UI;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(2164, 1269);
+            this.ClientSize = new System.Drawing.Size(1710, 844);
             this.Controls.Add(this.labelManager);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelNama);
@@ -269,7 +260,6 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         private System.Windows.Forms.ToolStripMenuItem cekKontrakBaruToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tambahKontrakToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manajemenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pesanMasukToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cekArtisToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelManager;

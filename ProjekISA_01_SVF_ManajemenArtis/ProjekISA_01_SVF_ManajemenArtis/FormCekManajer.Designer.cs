@@ -38,12 +38,12 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // dataGridViewManajer
             // 
             this.dataGridViewManajer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewManajer.Location = new System.Drawing.Point(29, 90);
+            this.dataGridViewManajer.Location = new System.Drawing.Point(26, 72);
             this.dataGridViewManajer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewManajer.Name = "dataGridViewManajer";
             this.dataGridViewManajer.RowHeadersWidth = 62;
             this.dataGridViewManajer.RowTemplate.Height = 28;
-            this.dataGridViewManajer.Size = new System.Drawing.Size(698, 358);
+            this.dataGridViewManajer.Size = new System.Drawing.Size(620, 286);
             this.dataGridViewManajer.TabIndex = 12;
             // 
             // label3
@@ -51,23 +51,24 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.label3.BackColor = System.Drawing.Color.Navy;
             this.label3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(29, 20);
+            this.label3.Location = new System.Drawing.Point(26, 16);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(698, 55);
+            this.label3.Size = new System.Drawing.Size(620, 44);
             this.label3.TabIndex = 64;
             this.label3.Text = "DAFTAR MANAJER";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormCekManajer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 482);
+            this.BackgroundImage = global::ProjekISA_01_SVF_ManajemenArtis.Properties.Resources.Bg_basic;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(674, 386);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridViewManajer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormCekManajer";
             this.Text = "Cek Manajer";
             this.Load += new System.EventHandler(this.FormCekManajer_Load);
