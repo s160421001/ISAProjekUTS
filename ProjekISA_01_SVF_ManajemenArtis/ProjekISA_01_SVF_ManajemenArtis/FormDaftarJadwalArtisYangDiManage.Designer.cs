@@ -39,6 +39,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxArtis = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJadwal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,6 +163,17 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.label1.Text = "JADWAL ARTIS YANG DI MANAGE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // buttonExit
+            // 
+            this.buttonExit.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.Location = new System.Drawing.Point(597, 571);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(140, 38);
+            this.buttonExit.TabIndex = 68;
+            this.buttonExit.Text = "Kembali";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // FormDaftarJadwalArtisYangDiManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -169,7 +181,8 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::ProjekISA_01_SVF_ManajemenArtis.Properties.Resources.Bg_basic;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(761, 578);
+            this.ClientSize = new System.Drawing.Size(761, 631);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxArtis);
             this.Controls.Add(this.label3);
@@ -201,5 +214,6 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxArtis;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonExit;
     }
 }

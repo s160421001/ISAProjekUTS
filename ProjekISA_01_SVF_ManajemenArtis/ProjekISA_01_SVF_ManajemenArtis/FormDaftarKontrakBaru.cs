@@ -209,5 +209,10 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 dataGridViewKontrak.Columns.Add(gridButton4);
             }
         }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

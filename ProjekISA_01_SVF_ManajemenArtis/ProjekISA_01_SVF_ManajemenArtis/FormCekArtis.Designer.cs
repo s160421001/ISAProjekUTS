@@ -32,6 +32,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCekArtis));
             this.dataGridViewArtis = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.buttonExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArtis)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +61,17 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.label3.Text = "DAFTAR ARTIS";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // buttonExit
+            // 
+            this.buttonExit.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.Location = new System.Drawing.Point(509, 380);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(140, 38);
+            this.buttonExit.TabIndex = 64;
+            this.buttonExit.Text = "Kembali";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // FormCekArtis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -67,7 +79,8 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.AutoSize = true;
             this.BackgroundImage = global::ProjekISA_01_SVF_ManajemenArtis.Properties.Resources.otherbg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(684, 389);
+            this.ClientSize = new System.Drawing.Size(674, 430);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridViewArtis);
             this.DoubleBuffered = true;
@@ -85,5 +98,6 @@ namespace ProjekISA_01_SVF_ManajemenArtis
 
         private System.Windows.Forms.DataGridView dataGridViewArtis;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonExit;
     }
 }

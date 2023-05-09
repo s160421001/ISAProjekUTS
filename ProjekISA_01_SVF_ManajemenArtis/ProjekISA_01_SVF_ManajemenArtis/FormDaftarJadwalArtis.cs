@@ -198,6 +198,11 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 MessageBox.Show("Kontrak telah tercetak");
             }
         }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
     
 }

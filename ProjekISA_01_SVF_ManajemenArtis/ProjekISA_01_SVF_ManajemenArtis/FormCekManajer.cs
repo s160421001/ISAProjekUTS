@@ -71,5 +71,10 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             dataGridViewManajer.ReadOnly = true;
             dataGridViewManajer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

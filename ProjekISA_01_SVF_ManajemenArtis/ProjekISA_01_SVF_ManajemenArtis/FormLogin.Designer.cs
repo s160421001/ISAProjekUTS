@@ -46,9 +46,9 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 115);
+            this.label2.Location = new System.Drawing.Point(23, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(193, 42);
+            this.label2.Size = new System.Drawing.Size(159, 34);
             this.label2.TabIndex = 2;
             this.label2.Text = "Password";
             // 
@@ -57,37 +57,38 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 50);
+            this.label1.Location = new System.Drawing.Point(16, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 42);
+            this.label1.Size = new System.Drawing.Size(166, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "Username";
             // 
             // textBoxUsername
             // 
             this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsername.Location = new System.Drawing.Point(217, 39);
+            this.textBoxUsername.Location = new System.Drawing.Point(193, 31);
             this.textBoxUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(337, 50);
+            this.textBoxUsername.Size = new System.Drawing.Size(300, 43);
             this.textBoxUsername.TabIndex = 1;
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.Location = new System.Drawing.Point(217, 104);
+            this.textBoxPassword.Location = new System.Drawing.Point(193, 83);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(337, 50);
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(300, 43);
             this.textBoxPassword.TabIndex = 3;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(25, 330);
+            this.button1.Location = new System.Drawing.Point(22, 264);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 56);
+            this.button1.Size = new System.Drawing.Size(139, 45);
             this.button1.TabIndex = 7;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
@@ -96,10 +97,10 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // buttonSignUp
             // 
             this.buttonSignUp.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSignUp.Location = new System.Drawing.Point(360, 330);
+            this.buttonSignUp.Location = new System.Drawing.Point(320, 264);
             this.buttonSignUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSignUp.Name = "buttonSignUp";
-            this.buttonSignUp.Size = new System.Drawing.Size(195, 56);
+            this.buttonSignUp.Size = new System.Drawing.Size(173, 45);
             this.buttonSignUp.TabIndex = 8;
             this.buttonSignUp.Text = "Sign Up";
             this.buttonSignUp.UseVisualStyleBackColor = true;
@@ -108,10 +109,10 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // textBoxCaptcha
             // 
             this.textBoxCaptcha.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCaptcha.Location = new System.Drawing.Point(217, 249);
+            this.textBoxCaptcha.Location = new System.Drawing.Point(193, 199);
             this.textBoxCaptcha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCaptcha.Name = "textBoxCaptcha";
-            this.textBoxCaptcha.Size = new System.Drawing.Size(337, 50);
+            this.textBoxCaptcha.Size = new System.Drawing.Size(300, 43);
             this.textBoxCaptcha.TabIndex = 6;
             // 
             // label3
@@ -119,9 +120,9 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(48, 255);
+            this.label3.Location = new System.Drawing.Point(43, 204);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 42);
+            this.label3.Size = new System.Drawing.Size(139, 34);
             this.label3.TabIndex = 5;
             this.label3.Text = "Captcha";
             // 
@@ -131,19 +132,19 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.labelCaptcha.BackColor = System.Drawing.Color.Transparent;
             this.labelCaptcha.Font = new System.Drawing.Font("Lucida Handwriting", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCaptcha.ForeColor = System.Drawing.Color.Maroon;
-            this.labelCaptcha.Location = new System.Drawing.Point(210, 182);
+            this.labelCaptcha.Location = new System.Drawing.Point(187, 146);
             this.labelCaptcha.Name = "labelCaptcha";
-            this.labelCaptcha.Size = new System.Drawing.Size(194, 48);
+            this.labelCaptcha.Size = new System.Drawing.Size(163, 40);
             this.labelCaptcha.TabIndex = 4;
             this.labelCaptcha.Text = "Captcha";
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjekISA_01_SVF_ManajemenArtis.Properties.Resources.Bg_basic;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(597, 426);
+            this.ClientSize = new System.Drawing.Size(531, 341);
             this.Controls.Add(this.labelCaptcha);
             this.Controls.Add(this.textBoxCaptcha);
             this.Controls.Add(this.label3);

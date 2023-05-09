@@ -292,7 +292,6 @@ namespace ManajemenArtis_Lib
                 {
                     int noUrutKode = int.Parse(hasil.GetInt32(0).ToString()) + 1;
                     kodeBaru = noUrutKode.ToString();
-
                 }
             }
             else
@@ -336,6 +335,7 @@ namespace ManajemenArtis_Lib
             }
             return false;
         }
+
         public static int EditData(Kontrak_kerja k)
         {
             string sql = "Update kontrak_kerja set deskripsi='" + Cryptography.EncryptTripleDES(k.Deskripsi) + "' where id='" + k.Id + "'";

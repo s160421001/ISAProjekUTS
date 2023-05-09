@@ -118,7 +118,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                             manager);
 
                         Artis.KontrakArtis(tmpArtis, manager.Id);
-                        MessageBox.Show("Artis berhasil dikontrak, Silahkan login ulang untuk membuka akses lainnya");
+                        MessageBox.Show("Artis berhasil dikontrak, Silahkan login ulang untuk membuka akses lainnya", "Informasi");
 
                         FormCekArtis_Load(sender, e);
 
@@ -129,6 +129,11 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                     }
                 }
             }
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

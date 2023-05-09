@@ -36,6 +36,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewJadwal = new System.Windows.Forms.DataGridView();
+            this.buttonExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJadwal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,13 +136,25 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.dataGridViewJadwal.TabIndex = 68;
             this.dataGridViewJadwal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewJadwal_CellContentClick);
             // 
+            // buttonExit
+            // 
+            this.buttonExit.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.Location = new System.Drawing.Point(592, 538);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(140, 38);
+            this.buttonExit.TabIndex = 77;
+            this.buttonExit.Text = "Kembali";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // FormDaftarJadwalArtis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjekISA_01_SVF_ManajemenArtis.Properties.Resources.Bg_basic;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(756, 556);
+            this.ClientSize = new System.Drawing.Size(756, 596);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
@@ -167,5 +180,6 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridViewJadwal;
+        private System.Windows.Forms.Button buttonExit;
     }
 }

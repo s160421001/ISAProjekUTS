@@ -19,6 +19,15 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             InitializeComponent();
         }
 
+        private void ClearTextBox()
+        {
+            textBoxNama.Text = "";
+            dateTimePickerTanggalLahir.Value = DateTime.Now;
+            textBoxPassword.Text = "";
+            textBoxUsername.Text = "";
+            comboBoxPosisi.SelectedIndex = 0;
+        }
+
         private void buttonTambah_Click(object sender, EventArgs e)
         {
             try
@@ -53,11 +62,12 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                     if(cek == true)
                     {
                         Artis.TambahData(newArtis);
-                        MessageBox.Show("Akun berhasil dibuat!");
+                        MessageBox.Show("Akun berhasil dibuat!", "Informasi");
+                        ClearTextBox();
                     }
                     else
                     {
-                        MessageBox.Show("Username telah digunakan, Silahkan gunakan username lainnya", "Information");
+                        MessageBox.Show("Username telah digunakan, Silahkan gunakan username lainnya", "Informasi");
                     }
                 }
                 else if(comboBoxPosisi.SelectedItem.ToString() == "Manajer")
@@ -90,7 +100,8 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                     if (cek == true)
                     {
                         Manager.TambahData(newManajer);
-                        MessageBox.Show("Akun berhasil dibuat!");
+                        MessageBox.Show("Akun berhasil dibuat!", "Informasi");
+                        ClearTextBox();
                     }
                     else
                     {
@@ -109,7 +120,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             comboBoxPosisi.SelectedIndex = 0;
         }
 
-        private void buttonEcit_Click(object sender, EventArgs e)
+        private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
