@@ -104,8 +104,8 @@ namespace ManajemenArtis_Lib
 
                 Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
                     result.GetString("judul"),
-                    result.GetString("pengaju"),
-                    result.GetString("lokasi"),
+                    Cryptography.DecryptTripleDES(result.GetString("pengaju")),
+                    Cryptography.DecryptTripleDES(result.GetString("lokasi")),
                     result.GetString("deskripsi"),
                     result.GetDateTime("tanggal_buat"),
                     result.GetDateTime("tanggal_acara"),
@@ -137,8 +137,8 @@ namespace ManajemenArtis_Lib
 
                 Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
                     result.GetString("judul"),
-                    result.GetString("pengaju"),
-                    result.GetString("lokasi"),
+                    Cryptography.DecryptTripleDES(result.GetString("pengaju")),
+                    Cryptography.DecryptTripleDES(result.GetString("lokasi")),
                     result.GetString("deskripsi"),
                     result.GetDateTime("tanggal_buat"),
                     result.GetDateTime("tanggal_acara"),
@@ -171,8 +171,8 @@ namespace ManajemenArtis_Lib
 
                 Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
                     result.GetString("judul"),
-                    result.GetString("pengaju"),
-                    result.GetString("lokasi"),
+                    Cryptography.DecryptTripleDES(result.GetString("pengaju")),
+                    Cryptography.DecryptTripleDES(result.GetString("lokasi")),
                     result.GetString("deskripsi"),
                     result.GetDateTime("tanggal_buat"),
                     result.GetDateTime("tanggal_acara"),
@@ -205,8 +205,8 @@ namespace ManajemenArtis_Lib
 
                 Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
                     result.GetString("judul"),
-                    result.GetString("pengaju"),
-                    result.GetString("lokasi"),
+                    Cryptography.DecryptTripleDES(result.GetString("pengaju")),
+                    Cryptography.DecryptTripleDES(result.GetString("lokasi")),
                     result.GetString("deskripsi"),
                     result.GetDateTime("tanggal_buat"),
                     result.GetDateTime("tanggal_acara"),
@@ -239,8 +239,8 @@ namespace ManajemenArtis_Lib
 
                 Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
                     result.GetString("judul"),
-                    result.GetString("pengaju"),
-                    result.GetString("lokasi"),
+                    Cryptography.DecryptTripleDES(result.GetString("pengaju")),
+                    Cryptography.DecryptTripleDES(result.GetString("lokasi")),
                     result.GetString("deskripsi"),
                     result.GetDateTime("tanggal_buat"),
                     result.GetDateTime("tanggal_acara"),
@@ -273,8 +273,8 @@ namespace ManajemenArtis_Lib
 
                 Kontrak_kerja tmp = new Kontrak_kerja(result.GetInt32("id"),
                     result.GetString("judul"),
-                    result.GetString("pengaju"),
-                    result.GetString("lokasi"),
+                    Cryptography.DecryptTripleDES(result.GetString("pengaju")),
+                    Cryptography.DecryptTripleDES(result.GetString("lokasi")),
                     result.GetString("deskripsi"),
                     result.GetDateTime("tanggal_buat"),
                     result.GetDateTime("tanggal_acara"),
@@ -292,8 +292,8 @@ namespace ManajemenArtis_Lib
             string sql = "insert into kontrak_kerja(judul, pengaju, lokasi, deskripsi, tanggal_buat, tanggal_acara, status_artis, manajer_id, artis_id) " +
                 "values ('" +
                 k.Judul + "','" +
-                k.Pengaju + "','" +
-                k.Lokasi + "','" +
+                Cryptography.EncryptTripleDES(k.Pengaju) + "','" +
+                Cryptography.EncryptTripleDES(k.Lokasi) + "','" +
                 k.Deskripsi + "','" +
                 k.TglBuat.ToString("yyyy-MM-dd") + "','" +
                 k.TglAcara.ToString("yyyy-MM-dd") + "','" +
@@ -339,8 +339,8 @@ namespace ManajemenArtis_Lib
             printFile.WriteLine("------------------ Kontrak Kerja ------------------");
             printFile.WriteLine("===================================================");
             printFile.WriteLine("Judul          : " + kontrak.Judul);
-            printFile.WriteLine("Pengaju        : " + kontrak.Pengaju);
-            printFile.WriteLine("Lokasi         : " + kontrak.Lokasi);
+            printFile.WriteLine("Pengaju        : " + Cryptography.DecryptTripleDES(kontrak.Pengaju));
+            printFile.WriteLine("Lokasi         : " + Cryptography.DecryptTripleDES(kontrak.Lokasi));
             printFile.WriteLine("Tanggal Acara  : " + kontrak.TglAcara.ToString("dd-MM-yyyy"));
             printFile.WriteLine("Deskripsi      : " + kontrak.Deskripsi);
             printFile.WriteLine("===================================================");
