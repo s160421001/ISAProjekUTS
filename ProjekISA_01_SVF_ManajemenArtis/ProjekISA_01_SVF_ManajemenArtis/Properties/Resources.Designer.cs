@@ -63,6 +63,26 @@ namespace ProjekISA_01_SVF_ManajemenArtis.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bg_basic {
+            get {
+                object obj = ResourceManager.GetObject("Bg_basic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Main_UI {
+            get {
+                object obj = ResourceManager.GetObject("Main UI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mainbackground {
             get {
                 object obj = ResourceManager.GetObject("mainbackground", resourceCulture);

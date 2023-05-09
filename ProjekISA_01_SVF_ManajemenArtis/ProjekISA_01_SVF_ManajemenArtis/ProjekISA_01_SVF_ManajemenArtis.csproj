@@ -209,5 +209,11 @@
   <ItemGroup>
     <None Include="Resources\otherbg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main UI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bg_basic.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
