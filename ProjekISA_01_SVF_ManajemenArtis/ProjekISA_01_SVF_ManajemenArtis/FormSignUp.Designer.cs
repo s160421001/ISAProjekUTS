@@ -41,6 +41,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.label4 = new System.Windows.Forms.Label();
             this.buttonTambah = new System.Windows.Forms.Button();
             this.comboBoxPosisi = new System.Windows.Forms.ComboBox();
+            this.buttonEcit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxPassword
@@ -141,7 +142,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             // buttonTambah
             // 
             this.buttonTambah.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTambah.Location = new System.Drawing.Point(483, 322);
+            this.buttonTambah.Location = new System.Drawing.Point(35, 322);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(140, 38);
             this.buttonTambah.TabIndex = 45;
@@ -162,11 +163,23 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.comboBoxPosisi.Size = new System.Drawing.Size(388, 31);
             this.comboBoxPosisi.TabIndex = 46;
             // 
+            // buttonEcit
+            // 
+            this.buttonEcit.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEcit.Location = new System.Drawing.Point(483, 322);
+            this.buttonEcit.Name = "buttonEcit";
+            this.buttonEcit.Size = new System.Drawing.Size(140, 38);
+            this.buttonEcit.TabIndex = 47;
+            this.buttonEcit.Text = "Close";
+            this.buttonEcit.UseVisualStyleBackColor = true;
+            this.buttonEcit.Click += new System.EventHandler(this.buttonEcit_Click);
+            // 
             // FormSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 386);
+            this.Controls.Add(this.buttonEcit);
             this.Controls.Add(this.comboBoxPosisi);
             this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.label4);
@@ -182,6 +195,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormSignUp";
             this.Text = "Sign Up";
+            this.Load += new System.EventHandler(this.FormSignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +215,6 @@ namespace ProjekISA_01_SVF_ManajemenArtis
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonTambah;
         private System.Windows.Forms.ComboBox comboBoxPosisi;
+        private System.Windows.Forms.Button buttonEcit;
     }
 }

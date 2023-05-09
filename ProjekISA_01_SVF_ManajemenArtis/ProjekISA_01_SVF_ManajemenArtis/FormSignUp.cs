@@ -103,5 +103,15 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private void FormSignUp_Load(object sender, EventArgs e)
+        {
+            comboBoxPosisi.SelectedIndex = 0;
+        }
+
+        private void buttonEcit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

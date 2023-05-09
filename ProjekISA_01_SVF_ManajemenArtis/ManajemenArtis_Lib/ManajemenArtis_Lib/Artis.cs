@@ -75,7 +75,7 @@ namespace ManajemenArtis_Lib
             string sql = "SELECT a.id, a.nama, a.tanggal_lahir, a.tanggal_masuk, a.username, a.status_manajer, a.manajer_id " +
                 "FROM artis as a " +
                 "INNER JOIN manajer as m ON a.manajer_id=m.id " +
-                "WHERE a.username='" + username + "' AND a.password='" + password + "';";
+                "WHERE a.username='" + username + "' AND a.password='" + Cryptography.EncryptTripleDES(password) + "';";
 
             MySqlDataReader result = Koneksi.JalankanQuery(sql);
 
@@ -152,7 +152,7 @@ namespace ManajemenArtis_Lib
                 a.Tanggal_lahir.ToString("yyyy-MM-dd") + "','" +
                 a.Tanggal_masuk.ToString("yyyy-MM-dd") + "','" +
                 a.Username + "','" +
-                a.Password + "','" +
+                Cryptography.EncryptTripleDES(a.Password) + "','" +
                 a.Status + "','0')";
 
             Koneksi.JalankanPerintahDML(sql);

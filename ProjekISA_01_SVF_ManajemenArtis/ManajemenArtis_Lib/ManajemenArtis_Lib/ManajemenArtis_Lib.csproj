@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Artis.cs" />
+    <Compile Include="Cryptography.cs" />
     <Compile Include="Koneksi.cs" />
     <Compile Include="Kontrak_kerja.cs" />
     <Compile Include="Manager.cs" />
