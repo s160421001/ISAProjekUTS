@@ -193,7 +193,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                         artis.Manager, artis);
 
                 Kontrak_kerja.PrintKontrak(tmpKontrak,
-                    "kontrak.txt", new Font("Couriew New", 12));
+                    "kontrak.pdf", new Font("Couriew New", 12));
 
                 MessageBox.Show("Kontrak telah tercetak");
             }
