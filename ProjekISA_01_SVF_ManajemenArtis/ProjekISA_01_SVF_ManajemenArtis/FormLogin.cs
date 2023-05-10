@@ -65,6 +65,8 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                         if (tmpManager.Username == "")
                         {
                             MessageBox.Show("Kombinasi username dan password tidak ditemukan", "Informasi");
+                            this.OnLoad(e);
+                            textBoxCaptcha.Clear();
                         }
                         else
                         {

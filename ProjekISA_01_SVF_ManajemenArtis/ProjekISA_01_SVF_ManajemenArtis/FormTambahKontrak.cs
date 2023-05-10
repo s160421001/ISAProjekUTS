@@ -58,7 +58,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
             listArtis = Artis.BacaData("a.manajer_id", manager.Id.ToString());
             comboBoxArtis.DataSource = listArtis;
             comboBoxArtis.DisplayMember = "nama"; 
-            comboBoxArtis.SelectedIndex = -1;            
+            comboBoxArtis.SelectedIndex = 0;            
         }
 
         private void comboBoxArtis_SelectedIndexChanged(object sender, EventArgs e)

@@ -5,17 +5,17 @@ Bagian "........" nantinya silahkan diisi dengan lokasi path gambar sebelum mema
 
 Berikut line yang harus diubah:
 > Line 308: Ubah bagian
-"C:\\Users\\Steven Christopher\\Desktop\\UBAYA\\Semester 4\\Information Security and Assurance\\ISAProjekUTS\\ProjekISA_01_SVF_ManajemenArtis\\SteganoPict\\kontrak.png"
+"C:\Users\Steven Christopher\Desktop\UBAYA\Semester 4\Information Security and Assurance\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\SteganoPict\kontrak.png"
 
 Menjadi:
-"........\\ISAProjekUTS\\ProjekISA_01_SVF_ManajemenArtis\\SteganoPict\\kontrak.png"
+"........\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\SteganoPict\kontrak.png"
 
 
 > Line 314: Ubah bagian
-"C:\\Users\\Steven Christopher\\Desktop\\UBAYA\\Semester 4\\Information Security and Assurance\\ISAProjekUTS\\ProjekISA_01_SVF_ManajemenArtis\\SteganoPict\\kontrak" + GenerateIdKontrakTerbaru() + ".png";
+"C:\Users\Steven Christopher\Desktop\UBAYA\Semester 4\Information Security and Assurance\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\SteganoPict\kontrak" + GenerateIdKontrakTerbaru() + ".png";
 
 Menjadi:
-........\\ISAProjekUTS\\ProjekISA_01_SVF_ManajemenArtis\\SteganoPict\\kontrak" + GenerateIdKontrakTerbaru() + ".png";
+........\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\SteganoPict\kontrak" + GenerateIdKontrakTerbaru() + ".png";
 
 
 > Line 315: Ubah bagian

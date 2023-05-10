@@ -124,7 +124,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                             artis.Manager, artis);
 
                         Kontrak_kerja.UpdateStatusKontrak(tmpKontrak, "terima");
-                        MessageBox.Show("Kontrak berhasil ditambahkan ke jadwal artis");
+                        MessageBox.Show("Kontrak berhasil ditambahkan ke jadwal artis", "Informasi");
                         FormDaftarKontrakPending_Load(sender, e);
                     }
                     catch (Exception ex)

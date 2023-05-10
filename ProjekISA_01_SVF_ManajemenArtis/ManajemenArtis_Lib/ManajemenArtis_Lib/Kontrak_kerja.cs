@@ -305,13 +305,13 @@ namespace ManajemenArtis_Lib
         public static bool TambahKontrak(Kontrak_kerja k)
         {
             //using stegano to hide lokasi
-            string originalPath = "C:\\Users\\Steven Christopher\\Desktop\\UBAYA\\Semester 4\\Information Security and Assurance\\ISAProjekUTS\\ProjekISA_01_SVF_ManajemenArtis\\SteganoPict\\kontrak.png";
+            string originalPath = @"C:\Users\Steven Christopher\Desktop\UBAYA\Semester 4\Information Security and Assurance\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\SteganoPict\kontrak.png";
             Bitmap img = new Bitmap(originalPath);
 
             string txtlokasi = k.Lokasi;
             Bitmap imgOutput = Steganography.SteganographyHelper.embedText(txtlokasi, img);
 
-            string outputPathForSave = "C:\\Users\\Steven Christopher\\Desktop\\UBAYA\\Semester 4\\Information Security and Assurance\\ISAProjekUTS\\ProjekISA_01_SVF_ManajemenArtis\\SteganoPict\\kontrak" + GenerateIdKontrakTerbaru() + ".png";
+            string outputPathForSave = @"C:\Users\Steven Christopher\Desktop\UBAYA\Semester 4\Information Security and Assurance\ISAProjekUTS\ProjekISA_01_SVF_ManajemenArtis\SteganoPict\kontrak" + GenerateIdKontrakTerbaru() + ".png";
             string outputPathForDatabase = @"C:\\\Users\\\Steven Christopher\\\Desktop\\\UBAYA\\\Semester 4\\\Information Security and Assurance\\\ISAProjekUTS\\\ProjekISA_01_SVF_ManajemenArtis\\\SteganoPict\\\kontrak" + GenerateIdKontrakTerbaru() + ".png";
             imgOutput.Save(outputPathForSave);
 
