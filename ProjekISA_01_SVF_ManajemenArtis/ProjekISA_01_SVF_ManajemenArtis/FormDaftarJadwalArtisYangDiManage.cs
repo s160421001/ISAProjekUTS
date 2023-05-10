@@ -110,7 +110,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 DataGridViewButtonColumn gridButton1 = new DataGridViewButtonColumn();
                 gridButton1.HeaderText = "Actions";
                 gridButton1.Name = "gridButtonCetak";
-                gridButton1.Text = "Lihat";
+                gridButton1.Text = "Cetak";
                 gridButton1.UseColumnTextForButtonValue = true;
                 dataGridViewJadwal.Columns.Add(gridButton1);
             }
@@ -268,7 +268,7 @@ namespace ProjekISA_01_SVF_ManajemenArtis
                 Kontrak_kerja.PrintKontrak(tmpKontrak,
                     "kontrak.txt", new Font("Couriew New", 12));
 
-                MessageBox.Show("Kontrak telah tercetak");
+                MessageBox.Show("Kontrak telah tercetak", "Informasi");
             }
         }
 

@@ -382,7 +382,7 @@ namespace ManajemenArtis_Lib
             printFile.WriteLine("------------------ Kontrak Kerja ------------------");
             printFile.WriteLine("===================================================");
             printFile.WriteLine("Judul          : " + kontrak.Judul);
-            printFile.WriteLine("Pengaju        : " + Cryptography.DecryptTripleDES(kontrak.Pengaju));
+            printFile.WriteLine("Pengaju        : " + kontrak.Pengaju);
 
             //extract lokasi from stegano
             Bitmap imgEmbed = new Bitmap(kontrak.Lokasi);
@@ -390,7 +390,7 @@ namespace ManajemenArtis_Lib
 
             printFile.WriteLine("Lokasi         : " + lokasi);
             printFile.WriteLine("Tanggal Acara  : " + kontrak.TglAcara.ToString("dd-MM-yyyy"));
-            printFile.WriteLine("Deskripsi      : " + Cryptography.DecryptTripleDES(kontrak.Deskripsi));
+            printFile.WriteLine("Deskripsi      : " + kontrak.Deskripsi);
             printFile.WriteLine("===================================================");
             printFile.WriteLine("Artis          : " + kontrak.Artis.Nama);
             printFile.WriteLine("===================================================");
